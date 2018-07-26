@@ -1,7 +1,7 @@
 # 目录
 - [加载和运行](#加载和运行)
 - [数据访问](#数据访问)
-- [DOM编程](#DOM 编程)
+- [DOM编程](#DOM编程)
 - [算法和流程控制](https://github.com/ArcherGrey/study/blob/master/JavaScript/HPjavascript/HPjavascript4.md)
 - [字符串和正则表达式](https://github.com/ArcherGrey/study/blob/master/JavaScript/HPjavascript/HPjavascript5.md)
 - [响应接口](https://github.com/ArcherGrey/study/blob/master/JavaScript/HPjavascript/HPjavascript6.md)
@@ -280,7 +280,7 @@ Object.prototype.__proto = null
 
 ---
 
-# DOM 编程
+# DOM编程
 
 对DOM操作的代价昂贵，通常是一个性能瓶颈。主要有三个方面：
 - 访问和修改DOM元素
