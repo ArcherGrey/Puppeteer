@@ -64,7 +64,7 @@ function initializeContent() {
                                 name:'javascript 性能优化',
                                 subs:[
                                     {
-                                        name:'test',
+                                        name:'javascript 高性能（阅读总结）',
                                         src:'./doc/frontend/Performance/HPjavascript.md'
                                     }
                                 ]
