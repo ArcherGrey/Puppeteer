@@ -36,6 +36,10 @@ function initializeContent() {
                                     {
                                         name:'javascript 特殊技巧 (待补充)',
                                         src:'./doc/frontend/javascript/spec_tech.md'
+                                    },
+                                    {
+                                        name:'sublime 按照和使用技巧',
+                                        src:'./doc/frontend/javascript/sublime.md'
                                     }
                                 ]
                             },
