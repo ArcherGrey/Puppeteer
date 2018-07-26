@@ -15,7 +15,7 @@ function initializeContent() {
                         name:'前端',
                         subs:[
                             {
-                                name:'javascript',
+                                name:'javascript 通用',
                                 subs:[
                                     {
                                         name:'包装对象',
@@ -57,6 +57,15 @@ function initializeContent() {
                                     {
                                         name:'[threejs入门-3] 探索和互动',
                                         src:'./doc/frontend/wengl/Exploring_and_Interacting.md'
+                                    }
+                                ]
+                            },
+                            {
+                                name:'javascript 性能优化',
+                                subs:[
+                                    {
+                                        name:'test',
+                                        src:'./doc/frontend/Performance/HPjavascript.md'
                                     }
                                 ]
                             },
