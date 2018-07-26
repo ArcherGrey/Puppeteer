@@ -43,6 +43,15 @@ function initializeContent() {
                                         src:'./1.md'
                                     }
                                 ]
+                            },
+                            {
+                                name:'css',
+                                subs:[
+                                    {
+                                        name:'test',
+                                        src:'./1.md'
+                                    }
+                                ]
                             }
                         ]
                     },
