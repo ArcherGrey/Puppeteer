@@ -1,22 +1,5 @@
 
 window.onload = () => {
-    // markdown 文件
-    // var src;
-
-    // 读取 markdown 文件并且修改内容
-    // function readMarkdown(filename) {
-    //   debugger
-    //   var xhr = new XMLHttpRequest();
-    //   xhr.open('get', filename, true);
-    //   xhr.send();
-    //   xhr.onreadystatechange = function () {
-    //     if (xhr.readyState == 4 && xhr.status == 200) {
-    //       src = xhr.responseText
-    //       document.getElementById('mark').innerHTML = marked(src);
-    //     }
-    //   };
-    // }
-
     initializeContent();
 }
 
@@ -35,8 +18,8 @@ function initializeContent() {
                                 name:'javascript',
                                 subs:[
                                     {
-                                        name:'javascript 特殊技巧',
-                                        src:'./test/2.md'
+                                        name:'包装对象',
+                                        src:'./doc/frontend/javascript/bzdx.md'
                                     },
                                     {
                                         name:'test',
