@@ -5,7 +5,7 @@
 - [算法和流程控制](#算法和流程控制)
 - [字符串和正则表达式](#字符串和正则表达式)
 - [响应接口](#响应接口)
-- [ajax和xml](#网络通信（ajax/xml）)
+- [ajax和xml](#网络通信)
 - [编程实践](https://github.com/ArcherGrey/study/blob/master/JavaScript/HPjavascript/HPjavascript8.md)
 
 # 加载和运行
@@ -697,7 +697,8 @@ worker.postMessage("Nicholas");
 
 ---
 
-# 网络通信（ajax/xml）
+# 网络通信
+## ajax/xml
 
 ##  数据传输
 
