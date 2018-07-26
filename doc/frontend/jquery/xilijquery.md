@@ -1,4 +1,4 @@
-- [框架设计概述](#1)
+- [框架设计概述](#a)
     - [设计目标](#2)
 - [一步步实现jQuery](#3)
     - [原型继承](#4)
@@ -13,7 +13,7 @@
 - [深入了解选择器](#13)
 
 # 框架设计概述
-<>
+
 ## 设计目标
 
 `jQuery` = `javascript` + `Query` ，正如其名称一样，它的核心功能就是javascript 查询，更通俗的说就是选择DOM 元素，然后对元素进行操作。
@@ -331,4 +331,4 @@ var jQuery = window.jQuery = window.$ = function(selector,context){
 
 `jQuery` 选择器功能强大，而且用法简单，它只提供了一个接口`jQuery()`或者简写`$()`。这一章我们深入分析选择器的设计思路、实现过程、工作原理。
 
-<span id='1'></span>
+<span id='a'></span>
