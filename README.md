@@ -1,5 +1,14 @@
 # 文档合集
 
+技术栈：
+- vue
+- element (配合vue的ui框架)
+- marked.js (解析markdown文件)
+
+难点：
+- markdown文件读取（通过xhr来读取文件）
+- 菜单树形结果存储
+
 [首页](https://archergrey.github.io/document/)
 
 
