@@ -136,7 +136,9 @@ function initializeContent() {
                 debugger
                 // 读取 markdown 文件并且修改内容
                 var xhr = new XMLHttpRequest();
-                xhr.open('get', filename, true);
+                var nowTime = new Date().getTime();//获取当前时间作为随机数
+                var url = filename +'?time='+ nowTime;
+                xhr.open('get', url, true);
                 xhr.send();
                 xhr.onreadystatechange = function () {
                     if (xhr.readyState == 4 && xhr.status == 200) {
