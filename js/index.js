@@ -28,6 +28,10 @@ function initializeContent() {
                                     {
                                         name:'this',
                                         src:'./doc/frontend/javascript/this.md'
+                                    },
+                                    {
+                                        name:'call | apply | bind',
+                                        src:'./doc/frontend/javascript/cab.md'
                                     }
                                 ]
                             },
