@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>文档总结</title>
+  <!-- CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17-beta.0/vue.js"></script>
+  <!-- 引入样式 -->
+  <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/2.10.0/github-markdown.css">
+  <!-- 引入组件库 -->
+  <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+
+
+  <!-- 当前网页需要的脚本和样式文件 -->
+  <script src="m.js"></script>
+  <link rel="stylesheet" href="./m.css">
+ 
+</head>
+
+<body>
+  <div id="content">
+    <el-container>
+      <el-aside width="fit-content" @mouseover.native="Showmenu" @mouseout.native="Hidemenu">
+
+        <el-menu background-color="#fff" text-color="#333" active-text-color="#333" :collapse="isCollapse" id='menu'>
+          <el-submenu index="1" v-for="top in tops">
+            <template slot="title">
+              <i class="el-icon-menu"></i>
+              <span>
+                {{top.name}}
+              </span>
+            </template>
+            <el-menu-item-group v-for="sub in top.subs">
+              <template slot="title">
+                <i class="el-icon-caret-bottom"></i>
+                <span>
+                  {{sub.name}}
+                </span>
+              </template>
+              <el-menu-item v-for="sub in sub.subs" index="1" @click.native="ReadMarkdown(sub.src)">
+                <span>
+                  {{sub.name}}
+                </span>
+              </el-menu-item>
+            </el-menu-item-group>
+          </el-submenu>
+        </el-menu>
+      </el-aside>
+      <el-container>
+        <el-header>
+          <el-dropdown>
+            <span class="el-dropdown-link">
+              下拉菜单
+              <i class="el-icon-arrow-down el-icon--right"></i>
+            </span>
+            <el-dropdown-menu slot="dropdown">
+              <el-dropdown-item>黄金糕</el-dropdown-item>
+              <el-dropdown-item>狮子头</el-dropdown-item>
+              <el-dropdown-item>螺蛳粉</el-dropdown-item>
+              <el-dropdown-item disabled>双皮奶</el-dropdown-item>
+              <el-dropdown-item divided>蚵仔煎</el-dropdown-item>
+            </el-dropdown-menu>
+          </el-dropdown>
+          <el-input v-model="input" placeholder="请输入内容" style="width: fit-content">
+
+
+            <el-button slot="append" type="primary" icon="el-icon-search" @click.native="Search">搜索</el-button>
+          </el-input>
+        </el-header>
+        <el-main>
+          <div class="main-center">
+            <article class="markdown-body">
+              <div id="mark">
+
+              </div>
+            </article>
+          </div>
+        </el-main>
+        <el-footer>
+          <el-button :plain="true" @click.native="Info">
+            <i class="el-icon-info" @click.native="Info"></i>
+          </el-button>
+        </el-footer>
+      </el-container>
+    </el-container>
+  </div>
+</body>
+
+</html>
