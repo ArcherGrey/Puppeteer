@@ -22,8 +22,8 @@ function initializeContent() {
                                         src:'./doc/frontend/javascript/bzdx.md'
                                     },
                                     {
-                                        name:'test',
-                                        src:'./1.md'
+                                        name:'原型链',
+                                        src:'./doc/frontend/javascript/prototype.md'
                                     }
                                 ]
                             },
