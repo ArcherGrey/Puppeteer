@@ -6,7 +6,7 @@
 - [字符串和正则表达式](#字符串和正则表达式)
 - [响应接口](#响应接口)
 - [ajax和xml](#网络通信)
-- [编程实践](https://github.com/ArcherGrey/study/blob/master/JavaScript/HPjavascript/HPjavascript8.md)
+- [编程实践](#编程实践)
 
 # 加载和运行
 
@@ -752,4 +752,14 @@ document.getElementsByTagName_r('head')[0].appendChild(scriptElement);
 - 减少请求数量，可通过JavaScript 和CSS 文件打包，或者使用MXHR
 - 缩短页面的加载时间，在页面其它内容加载之后，使用Ajax 获取少量重要文件
 - 确保代码错误不要直接显示给用户，并在服务器端处理错误
+
+---
+
+# 编程实践 
+## 总结
+- 通过避免使用eval_r()和Function()构造器避免二次评估。此外，给setTimeout()和setInterval()传递函数参数而不是字符串参数
+- 创建新对象和数组时使用对象直接量和数组直接量。它们比非直接量形式创建和初始化更快
+- 避免重复进行相同工作。当需要检测浏览器时，使用延迟加载或条件预加载
+- 当执行数学远算时，考虑使用位操作，它直接在数字底层进行操作
+- 原生方法总是比JavaScript 写的东西要快。尽量使用原生方法
 
