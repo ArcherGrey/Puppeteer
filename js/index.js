@@ -70,6 +70,15 @@ function initializeContent() {
                                 ]
                             },
                             {
+                                name:'jquery',
+                                subs:[
+                                    {
+                                        name:'犀利 jquery （阅读总结-待补充）',
+                                        src:'./doc/frontend/jquery/xilijquery.md'
+                                    }
+                                ]
+                            },
+                            {
                                 name:'html',
                                 subs:[
                                     {
