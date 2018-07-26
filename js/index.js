@@ -32,6 +32,10 @@ function initializeContent() {
                                     {
                                         name:'call | apply | bind',
                                         src:'./doc/frontend/javascript/cab.md'
+                                    },
+                                    {
+                                        name:'javascript 特殊技巧 (待补充)',
+                                        src:'./doc/frontend/javascript/spec_tech.md'
                                     }
                                 ]
                             },
