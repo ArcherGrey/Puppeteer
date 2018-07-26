@@ -1,0 +1,39 @@
+.el-header,
+.el-footer {
+  background-color: #B3C0D1;
+  color: #333;
+  text-align: right;
+  line-height: 60px;
+}
+
+.el-aside {
+  background-color: rgb(255, 255, 255);
+  color: #333;
+  text-align: center;
+  line-height: 200px;
+  height: -webkit-fill-available;
+}
+
+.el-main {
+  background-color: #E9EEF3;
+  color: #333;
+  /* text-align: center; */
+  line-height: 160px;
+}
+
+.el-container {
+  height: -webkit-fill-available;
+}
+
+.el-menu:not(.el-menu--collapse) {
+  width: 200px;
+  min-height: 400px;
+}
+article{
+  margin-left: auto;
+  margin-right: auto;
+  border-left:cornsilk solid;
+  border-right: cornsilk solid;
+  padding: 0px 80px 0px 80px;
+  width: 60%;
+}
