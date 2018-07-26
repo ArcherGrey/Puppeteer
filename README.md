@@ -7,7 +7,7 @@
 
 难点：
 - markdown文件读取（通过xhr来读取文件）
-- 菜单树形结果存储
+- 菜单树形结果存储（对象数组）
 
 [首页](https://archergrey.github.io/document/)
 
