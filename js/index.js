@@ -24,6 +24,10 @@ function initializeContent() {
                                     {
                                         name:'原型链',
                                         src:'./doc/frontend/javascript/prototype.md'
+                                    },
+                                    {
+                                        name:'this',
+                                        src:'./doc/frontend/javascript/this.md'
                                     }
                                 ]
                             },
