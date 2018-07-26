@@ -280,7 +280,7 @@ Object.prototype.__proto = null
 
 ---
 
-# DOM编程
+# DOM 编程
 
 对DOM操作的代价昂贵，通常是一个性能瓶颈。主要有三个方面：
 - 访问和修改DOM元素
