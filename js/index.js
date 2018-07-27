@@ -1,16 +1,6 @@
 
 window.onload = () => {
-    initializeContent();
-}
-
-function initializeContent() {
-    new Vue({
-        el: '#content',
-        data: function () {
-            return {
-                input: '',
-                isCollapse: true,
-                tops:[
+    var menu = [
                     {
                         name:'前端',
                         subs:[
@@ -116,7 +106,19 @@ function initializeContent() {
                             }
                         ]
                     }
-                ]
+                ];
+    
+    initializeContent(menu);
+}
+
+function initializeContent(menu) {
+    new Vue({
+        el: '#content',
+        data: function () {
+            return {
+                input: '',
+                isCollapse: true,
+                tops:menu
             }
         },
         methods: {
