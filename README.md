@@ -19,7 +19,7 @@
 
 按照时间+第几篇:
 
-`xxxx-xx-xx-n`
+`xxxx_xx_xx_n`
 
 
 ## 问题
