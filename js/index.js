@@ -150,6 +150,7 @@ function initializeContent(menu) {
                     if (xhr.readyState == 4 && xhr.status == 200) {
                         src = xhr.responseText
                         document.getElementById('mark').innerHTML = marked(src);
+                        document.getElementsByClassName('el-main')[0].scrollTop = 0;
                     }
                 };
             }
