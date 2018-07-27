@@ -40,6 +40,10 @@ function initializeContent() {
                                     {
                                         name:'sublime 按照和使用技巧',
                                         src:'./doc/frontend/javascript/sublime.md'
+                                    },
+                                    {
+                                        name:'测试文档',
+                                        src:'./doc/frontend/javascript/test.md'
                                     }
                                 ]
                             },
