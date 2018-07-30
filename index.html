@@ -40,7 +40,7 @@
                   {{sub.name}}
                 </span>
               </template>
-              <el-menu-item v-for="sub in sub.subs" index="1" @click.native="ReadMarkdown(sub.src)">
+              <el-menu-item v-for="sub in sub.subs" index="1" @click.native="ReadMarkdown(sub.src)" :title="sub.name">
                 <span>
                   {{sub.name}}
                 </span>
