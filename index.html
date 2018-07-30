@@ -42,7 +42,7 @@
               </template>
               <el-menu-item v-for="sub in sub.subs" index="1" @click.native="ReadMarkdown(sub.src)" :title="sub.name">
                 <span>
-                  {{sub.name}}
+                  {{sub.name=sub.name.length>12?sub.name.substring(0,13)+'...':sub.name}}
                 </span>
               </el-menu-item>
             </el-menu-item-group>
