@@ -9,7 +9,7 @@
 .el-aside {
   background-color: rgb(255, 255, 255);
   color: #333;
-  text-align: center;
+  text-align: left;
   line-height: 200px;
   height: -webkit-fill-available;
 }
