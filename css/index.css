@@ -7,7 +7,7 @@
 }
 
 .el-aside {
-  background-color: rgb(255, 255, 255);
+  background-color: lightgrey;
   color: #333;
   text-align: left;
   line-height: 200px;
@@ -36,4 +36,9 @@ article{
   border-right: cornsilk solid;
   padding: 0px 80px 0px 80px;
   width: 60%;
+}
+
+.first_sub{
+    font-weight: 600;
+    color: #42b983 !important;
 }
