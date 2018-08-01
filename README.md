@@ -2,7 +2,8 @@
 
 [地址](https://archergrey.github.io/document/)
 
-
+- 普通零散文档放在左侧菜单中
+- 系列文档放在首页跑马灯中
 
 技术栈：
 - vue
