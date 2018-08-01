@@ -62,7 +62,7 @@
               <el-dropdown-item>狮子头</el-dropdown-item>
               <el-dropdown-item>螺蛳粉</el-dropdown-item>
               <el-dropdown-item disabled>双皮奶</el-dropdown-item>
-              <el-dropdown-item divided>蚵仔煎</el-dropdown-item>
+              <el-dropdown-item divided @click.native="BackToIndex">首页</el-dropdown-item>
             </el-dropdown-menu>
           </el-dropdown>
           <el-input v-model="input" placeholder="请输入内容" style="width: fit-content">
@@ -74,8 +74,16 @@
         <el-main>
           <div class="main-center">
             <article class="markdown-body">
-              <div id="mark">
-
+              <div id="mark" class="all">
+                <div></div>
+                <div class="block">
+                  <span class="demonstration">系列文档</span>
+                  <el-carousel>
+                    <el-carousel-item v-for="item in series" :key="item">
+                      <div @click.native="goto(item)">{{ item.name }}</h3>
+                    </el-carousel-item>
+                  </el-carousel>
+                </div>
               </div>
             </article>
           </div>
