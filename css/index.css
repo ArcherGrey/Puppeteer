@@ -72,3 +72,9 @@ article{
   display: grid;
   grid-template-rows:repeat(3, 1fr);
 }
+
+
+img{
+  height: 100%;
+  width: 100%;
+}
