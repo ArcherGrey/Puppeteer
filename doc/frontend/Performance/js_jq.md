@@ -1,6 +1,6 @@
 # jQuery 和 原生 js 性能对比
 目录
-- [选择器](#Selector)
+- [选择器](#selector)
 [a](#A)
 a
 a
@@ -21,7 +21,7 @@ a
 
 a
 
-## Selector
+## selector
 
 （jquery时间 / 原生js时间）
 - ID: 五倍左右
