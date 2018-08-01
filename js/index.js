@@ -138,14 +138,14 @@ window.onload = () => {
         }
     ];
 
-    var main=[
+   var main=[
         {
             name:'anime',
-            src:''
+            src:'./img/anime_title.png'
         },
         {
             name:'electron',
-            src:''
+            src:'./img/electron_title.png'
         }
     ];
     initializeContent(menu,main);
