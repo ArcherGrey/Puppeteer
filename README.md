@@ -44,3 +44,16 @@
 
 - 循环引用（a.parent=b b.child=a）
 - 浅拷贝深拷贝
+
+
+## 一些有意思的网站
+
+- [你不需要jquery](https://blog.garstasio.com/you-dont-need-jquery/)
+- [nodejs文档](https://nodejs.org/download/release/v8.9.1/docs/api/)
+- [codepen-前端各种特效，在线实时渲染](https://codepen.io/)
+- [codewars-在线刷题升级](https://www.codewars.com/)
+- []()
+- []()
+- []()
+- []()
+- []()
