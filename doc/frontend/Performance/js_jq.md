@@ -1,25 +1,7 @@
 # jQuery 和 原生 js 性能对比
 目录
 - [选择器](#selector)
-[a](#A)
-a
-a
-a
-a
-a
 
-a
-a
-a
-a
-a
-a
-a
-
-aa
-a
-
-a
 
 ## selector
 
@@ -59,4 +41,4 @@ a
 
 
 
-## A
+
