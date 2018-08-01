@@ -46,3 +46,29 @@ article{
 .top{
   color: #A020F0;
 }
+
+.el-carousel__item div {
+  color: #475669;
+  font-size: 14px;
+  /* opacity: 0.75; */
+  line-height: 200px;
+  margin: 0;
+  text-align: center;
+}
+.el-carousel__item:nth-child(3n) {
+  background-color: #EE9A00;
+  opacity: 0.8;
+}
+.el-carousel__item:nth-child(3n+1) {
+  background-color: #B3EE3A;
+  opacity: 0.8;
+}
+.el-carousel__item:nth-child(3n+2) {
+  background-color: #8470FF;
+  opacity: 0.8;
+}
+
+.all {
+  display: grid;
+  grid-template-rows:repeat(3, 1fr);
+}
