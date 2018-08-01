@@ -78,9 +78,9 @@
                 <div></div>
                 <div class="block">
                   <span class="demonstration">系列文档</span>
-                  <el-carousel>
-                    <el-carousel-item v-for="item in series" :key="item">
-                      <div @click.native="goto(item)">{{ item.name }}</h3>
+                  <el-carousel indicator-position="outside">
+                    <el-carousel-item v-for="item in series" >
+                      <img @click.native="goto(item)" :src="item.src" />
                     </el-carousel-item>
                   </el-carousel>
                 </div>
