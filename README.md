@@ -1,5 +1,7 @@
 # 文档合集
 
+**markdown的锚点跳转标签必须是英文小写**
+
 [地址](https://archergrey.github.io/document/)
 
 - 普通零散文档放在左侧菜单中
