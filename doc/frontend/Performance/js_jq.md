@@ -3,7 +3,8 @@
 - [选择器](#Selector)
 
 
-## Selector（选择器）
+## Selector
+选择器
 （jquery时间 / 原生js时间）
 - ID: 五倍左右
 - Class: 十倍左右
