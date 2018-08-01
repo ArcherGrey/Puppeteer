@@ -138,17 +138,28 @@ window.onload = () => {
         }
     ];
 
-    initializeContent(menu);
+    var main=[
+        {
+            name:'anime',
+            src:''
+        },
+        {
+            name:'electron',
+            src:''
+        }
+    ];
+    initializeContent(menu,main);
 }
 
-function initializeContent(menu) {
+function initializeContent(menu, main) {
     new Vue({
         el: '#content',
         data: function () {
             return {
                 input: '',
                 isCollapse: true,
-                tops: menu
+                tops: menu,
+                series: main
             }
         },
         methods: {
@@ -183,6 +194,12 @@ function initializeContent(menu) {
                         document.getElementsByClassName('el-main')[0].scrollTop = 0;
                     }
                 };
+            },
+            BackToIndex: function () {
+               // 回到首页
+            },
+            goto:function(){
+               // 首页跳转
             }
         }
     })
