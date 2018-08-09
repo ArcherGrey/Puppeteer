@@ -81,7 +81,7 @@
                 <div class="block">
                   <el-carousel indicator-position="outside">
                     <el-carousel-item v-for="item in series" >
-                      <img @click.native="goto(item)" :src="item.src" />
+                      <img @click.native="goto(item.url)" :src="item.src" />
                     </el-carousel-item>
                   </el-carousel>
                 </div>
