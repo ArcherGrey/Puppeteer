@@ -145,7 +145,8 @@ window.onload = () => {
         },
         {
             name:'electron',
-            src:'./img/electron_title.png'
+            src:'./img/electron_title.png',
+            url:'https://github.com/ArcherGrey/electron_notebook'
         }
     ];
     initializeContent(menu,main);
@@ -198,8 +199,9 @@ function initializeContent(menu, main) {
             BackToIndex: function () {
                // 回到首页
             },
-            goto:function(){
+            goto:function(url){
                // 首页跳转
+               window.open(url,'_self');
             }
         }
     })
