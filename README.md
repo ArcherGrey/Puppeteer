@@ -2,6 +2,8 @@
 
 **markdown的锚点跳转标签必须是英文小写**
 
+> `index.js` 中添加新文章
+
 [地址](https://archergrey.github.io/document/)
 
 - 普通零散文档放在左侧菜单中
