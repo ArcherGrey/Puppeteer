@@ -32,8 +32,8 @@ window.onload = () => {
                             src: './doc/frontend/javascript/sublime.md'
                         },
                         {
-                            name: '测试文档',
-                            src: './doc/frontend/javascript/test.md'
+                            name: 'json 和 jsonp',
+                            src: './doc/frontend/javascript/2018_08_16_1.md'
                         }
                     ]
                 },
