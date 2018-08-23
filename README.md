@@ -54,6 +54,7 @@
 - 循环引用（a.parent=b b.child=a）
 - 浅拷贝深拷贝
 - ~~json 和 jsonp 简介~~
+- Puppeteer
 
  
 ## 一些有意思的网站
