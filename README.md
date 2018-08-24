@@ -56,6 +56,7 @@
 - ~~json 和 jsonp 简介~~
 - Puppeteer
 - 闭包
+- js模块化
  
 ## 一些有意思的网站
 
