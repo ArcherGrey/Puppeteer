@@ -138,18 +138,18 @@ window.onload = () => {
         }
     ];
 
-   var main=[
+    var main = [
         {
-            name:'anime',
-            src:'./img/anime_title.png'
+            name: 'anime',
+            src: './img/anime_title.png'
         },
         {
-            name:'electron',
-            src:'./img/electron_title.png',
-            url:'https://github.com/ArcherGrey/electron_notebook'
+            name: 'electron',
+            src: './img/electron_title.png',
+            url: 'https://github.com/ArcherGrey/electron_notebook'
         }
     ];
-    initializeContent(menu,main);
+    initializeContent(menu, main);
 }
 
 function initializeContent(menu, main) {
@@ -160,7 +160,8 @@ function initializeContent(menu, main) {
                 input: '',
                 isCollapse: true,
                 tops: menu,
-                series: main
+                series: main,
+                main_menu: null
             }
         },
         methods: {
@@ -190,18 +191,27 @@ function initializeContent(menu, main) {
                 xhr.send();
                 xhr.onreadystatechange = function () {
                     if (xhr.readyState == 4 && xhr.status == 200) {
-                        src = xhr.responseText
+                        src = xhr.responseText;
+                        // 点击具体文章，显示中间内容部分，隐藏中间菜单部分
+                        document.getElementById('mark').style.display = '';
+                        document.getElementById('main_menu').style.display = 'none';
                         document.getElementById('mark').innerHTML = marked(src);
                         document.getElementsByClassName('el-main')[0].scrollTop = 0;
                     }
                 };
             },
             BackToIndex: function () {
-               // 回到首页
+                // 回到首页
             },
-            goto:function(url){
-               // 首页跳转
-               window.open(url,'_self');
+            Goto: function (url) {
+                // 首页跳转
+                window.open(url, '_self');
+            },
+            Submenu: function (sub) {
+                this.main_menu = sub;
+                // 点击左边菜单隐藏中间内容部分，显示中间菜单部分
+                document.getElementById('main_menu').style.display = '';
+                document.getElementById('mark').style.display = 'none';
             }
         }
     })

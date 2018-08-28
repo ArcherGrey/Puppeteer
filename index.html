@@ -15,9 +15,9 @@
 
 
   <!-- 当前网页需要的脚本和样式文件 -->
-  <script src="./js/index.js"></script>
-  <link rel="stylesheet" href="./css/index.css">
- 
+  <script src="./js/index.js?2a12132d3"></script>
+  <link rel="stylesheet" href="./css/index.css?asdasd">
+
 </head>
 
 <body>
@@ -34,16 +34,11 @@
                 </span>
               </i>
             </template>
-            <el-menu-item-group v-for="sub in top.subs">
-              <template slot="title">
-                <i class="el-icon-arrow-right"></i>
-                <span class="first_sub">
-                  {{sub.name}}
-                </span>
-              </template>
-              <el-menu-item v-for="sub in sub.subs" index="1" @click.native="ReadMarkdown(sub.src)" :title="sub.name">
+            <el-menu-item-group>
+              <el-menu-item :title="sub.name" v-for="sub in top.subs" @click.native="Submenu(sub)" index="1">
+                <i class="el-icon-circle-plus-outline"> </i>
                 <span>
-                  {{sub.name.length>8?sub.name.substring(0,7)+'...':sub.name}}
+                  {{sub.name}}
                 </span>
               </el-menu-item>
             </el-menu-item-group>
@@ -75,16 +70,21 @@
           <div class="main-center">
             <article class="markdown-body">
               <div id="mark" class="all">
-                <div class="title">
-                  <span class="demonstration">系列文档</span>
+                <div id="index">
+                  <div class="title">
+                    <span class="demonstration">系列文档</span>
+                  </div>
+                  <div class="block">
+                    <el-carousel indicator-position="outside">
+                      <el-carousel-item v-for="item in series">
+                        <img @click.native="Goto(item.url)" :src="item.src" />
+                      </el-carousel-item>
+                    </el-carousel>
+                  </div>
                 </div>
-                <div class="block">
-                  <el-carousel indicator-position="outside">
-                    <el-carousel-item v-for="item in series" >
-                      <img @click.native="goto(item.url)" :src="item.src" />
-                    </el-carousel-item>
-                  </el-carousel>
-                </div>
+              </div>
+              <div id="main_menu" v-if="main_menu">
+                <el-button v-for="item in main_menu.subs" @click.native="ReadMarkdown(item.src)">{{item.name}}</el-button>
               </div>
             </article>
           </div>
