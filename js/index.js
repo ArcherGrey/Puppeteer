@@ -210,7 +210,8 @@ function initializeContent(menu, main) {
             Submenu: function (sub) {
                 this.main_menu = sub;
                 // 点击左边菜单隐藏中间内容部分，显示中间菜单部分
-                document.getElementById('main_menu').style.display = '';
+                if (document.getElementById('main_menu'))
+                    document.getElementById('main_menu').style.display = '';
                 document.getElementById('mark').style.display = 'none';
             }
         }
