@@ -221,11 +221,6 @@ function initializeContent(menu, main) {
                 if (document.getElementById('main_menu'))
                     document.getElementById('main_menu').style.display = '';
                 document.getElementById('mark').style.display = 'none';
-            },
-            RandomNum: function (n, m) {
-                // 生成n和m之间的随机数，含n和m
-                var random = Math.floor(Math.random() * (m - n + 1) + n);
-                return random;
             }
         }
     })
