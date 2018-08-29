@@ -161,7 +161,13 @@ function initializeContent(menu, main) {
                 isCollapse: true,
                 tops: menu,
                 series: main,
-                main_menu: null
+                main_menu: null,
+                button_types: ["primary", "success", "info", "warning", "danger", ""]
+            }
+        },
+        computed:{
+            button_type:function(){
+                return button_types[RandomNum(0,5)];
             }
         },
         methods: {
@@ -215,6 +221,11 @@ function initializeContent(menu, main) {
                 if (document.getElementById('main_menu'))
                     document.getElementById('main_menu').style.display = '';
                 document.getElementById('mark').style.display = 'none';
+            },
+            RandomNum: function (n, m) {
+                // 生成n和m之间的随机数，含n和m
+                var random = Math.floor(Math.random() * (m - n + 1) + n);
+                return random;
             }
         }
     })
