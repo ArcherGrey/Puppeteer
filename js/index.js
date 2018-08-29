@@ -5,7 +5,7 @@ window.onload = () => {
             name: '前端',
             subs: [
                 {
-                    name: 'javascript 通用',
+                    name: 'javascript 知识点',
                     subs: [
                         {
                             name: '包装对象',
@@ -55,7 +55,7 @@ window.onload = () => {
                     ]
                 },
                 {
-                    name: 'javascript 性能优化',
+                    name: '性能优化',
                     subs: [
                         {
                             name: 'javascript 高性能（阅读总结）',

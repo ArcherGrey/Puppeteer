@@ -98,3 +98,7 @@ img{
 .list-complete-leave-active {
   position: absolute;
 }
+
+#main_menu{
+  line-height: 3;
+}
