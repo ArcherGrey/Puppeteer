@@ -209,6 +209,8 @@ function initializeContent(menu, main) {
             },
             Submenu: function (sub) {
                 this.main_menu = sub;
+                // 动画效果
+                this.main_menu.subs = _.shuffle(this.main_menu.subs)
                 // 点击左边菜单隐藏中间内容部分，显示中间菜单部分
                 if (document.getElementById('main_menu'))
                     document.getElementById('main_menu').style.display = '';

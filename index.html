@@ -7,6 +7,7 @@
   <!-- CDN -->
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17-beta.0/vue.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.14.1/lodash.min.js"></script>
   <!-- 引入样式 -->
   <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/2.10.0/github-markdown.css">
@@ -15,8 +16,8 @@
 
 
   <!-- 当前网页需要的脚本和样式文件 -->
-  <script src="./js/index.js?2a12132d3"></script>
-  <link rel="stylesheet" href="./css/index.css?asdasd">
+  <script src="./js/index.js?2a122d3"></script>
+  <link rel="stylesheet" href="./css/index.css?sd">
 
 </head>
 
@@ -84,7 +85,9 @@
                 </div>
               </div>
               <div id="main_menu" v-if="main_menu">
-                <el-button v-for="item in main_menu.subs" @click.native="ReadMarkdown(item.src)">{{item.name}}</el-button>
+                <transition-group name="list-complete" tag="p">
+                  <el-button v-for="item in main_menu.subs" v-bind:key="item.name" @click.native="ReadMarkdown(item.src)">{{item.name}}</el-button>
+                </transition-group>
               </div>
             </article>
           </div>
