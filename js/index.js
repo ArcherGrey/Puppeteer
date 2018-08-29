@@ -5,6 +5,15 @@ window.onload = () => {
             name: '前端',
             subs: [
                 {
+                    name: '开发工具',
+                    subs: [
+                        {
+                            name: 'sublime 安装和使用技巧',
+                            src: './doc/frontend/javascript/sublime.md'
+                        }
+                    ]
+                },
+                {
                     name: 'javascript 知识点',
                     subs: [
                         {
@@ -26,10 +35,6 @@ window.onload = () => {
                         {
                             name: 'javascript 特殊技巧 (待补充)',
                             src: './doc/frontend/javascript/spec_tech.md'
-                        },
-                        {
-                            name: 'sublime 按照和使用技巧',
-                            src: './doc/frontend/javascript/sublime.md'
                         },
                         {
                             name: 'json 和 jsonp',
@@ -64,10 +69,10 @@ window.onload = () => {
                     ]
                 },
                 {
-                    name: 'jquery',
+                    name: 'JQuery',
                     subs: [
                         {
-                            name: '犀利 jquery （阅读总结-待补充）',
+                            name: '犀利 JQuery （阅读总结-待补充）',
                             src: './doc/frontend/jquery/xilijquery.md'
                         }
                     ]
@@ -165,9 +170,9 @@ function initializeContent(menu, main) {
                 button_types: ["primary", "success", "info", "warning", "danger", ""]
             }
         },
-        computed:{
-            button_type:function(){
-                return button_types[RandomNum(0,5)];
+        computed: {
+            button_type: function () {
+                return button_types[RandomNum(0, 5)];
             }
         },
         methods: {
