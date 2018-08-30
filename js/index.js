@@ -39,6 +39,10 @@ window.onload = () => {
                         {
                             name: 'json 和 jsonp',
                             src: './doc/frontend/javascript/2018_08_16_1.md'
+                        },
+                        {
+                            name: '闭包',
+                            src: './doc/frontend/javascript/闭包.md'
                         }
                     ]
                 },
