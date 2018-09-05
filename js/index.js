@@ -47,6 +47,10 @@ window.onload = () => {
                         {
                             name: 'javascript 作用域、上下文、执行环境、作用域链',
                             src: './doc/frontend/javascript/javascript作用域.md'
+                        },
+                        {
+                            name: 'javascript 模块化',
+                            src: './doc/frontend/javascript/javascript 模块化.md'
                         }
                     ]
                 },

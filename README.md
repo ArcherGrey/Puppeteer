@@ -59,7 +59,7 @@
 - Puppeteer
 - ~~闭包~~
 - js模块化
-- js 作用域
+- ~~js 作用域~~
 - js 变量提升
 - outerhtml与innerhtml什么区别 
  
