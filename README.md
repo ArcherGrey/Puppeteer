@@ -70,7 +70,7 @@
 - [codepen-前端各种特效，在线实时渲染](https://codepen.io/)
 - [codewars-在线刷题升级](https://www.codewars.com/)
 - [git](https://git-scm.com/docs)
-- []()
+- [经济指标](https://zh.tradingeconomics.com/)
 - []()
 - []()
 - []()
