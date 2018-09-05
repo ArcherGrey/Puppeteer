@@ -43,6 +43,10 @@ window.onload = () => {
                         {
                             name: '闭包',
                             src: './doc/frontend/javascript/闭包.md'
+                        },
+                        {
+                            name: 'javascript 作用域、上下文、执行环境、作用域链',
+                            src: './doc/frontend/javascript/javascript作用域.md'
                         }
                     ]
                 },
