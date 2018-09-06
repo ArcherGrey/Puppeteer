@@ -29,3 +29,39 @@
 - AMD（Asynchronous Module Definition:异步模块定义）是 RequireJS 在推广过程中对模块定义的规范化产出。
 - CMD（Common Module Definition:公共模块定义）是 SeaJS 在推广过程中对模块定义的规范化产出。
 
+### 简单实现
+
+简单的通过导入不同的 `script` 不能解决问题：
+
+- 不同的模块可能是由不同的人完成，可能会产生相同的名字的变量和函数
+
+这里就需要利用到不同作用域中可以有相同名称的变量和函数：
+```
+// a.js
+
+var a = function(){
+    this.x = 1;
+    this.log = function(){
+        console.log(this.x);
+    }
+}
+
+// b.js
+
+var b = function(){
+    this.x = 1;
+    this.log = function(){
+        console.log(this.x);
+    }
+}
+
+```
+
+使用的时候：
+```
+var n = new a();
+n.x = 2;
+n.log(); // 显示2
+var m = new b();
+m.log(); // 显示1
+```
