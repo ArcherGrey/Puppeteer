@@ -158,7 +158,8 @@ window.onload = () => {
     var main = [
         {
             name: 'anime',
-            src: './img/anime_title.png'
+            src: './img/anime_title.png',
+            url: ''
         },
         {
             name: 'electron',
@@ -228,6 +229,7 @@ function initializeContent(menu, main) {
             },
             Goto: function (url) {
                 // 首页跳转
+                debugger
                 window.open(url, '_self');
             },
             Submenu: function (sub) {
