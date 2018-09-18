@@ -50,7 +50,7 @@ window.onload = () => {
                         },
                         {
                             name: 'javascript 模块化',
-                            src: './doc/frontend/javascript/javascript 模块化.md'
+                            src: './doc/frontend/javascript/javascript模块化.md'
                         }
                     ]
                 },
