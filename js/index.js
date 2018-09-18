@@ -224,13 +224,13 @@ function initializeContent(menu, main) {
                     }
                 };
             },
-            BackToIndex: function () {
-                // 回到首页
-            },
             Goto: function (url) {
-                // 首页跳转
+                // 页面跳转
                 debugger
-                window.open(url, '_self');
+                if (url == '')
+                    window.open('./index.html', '_self');
+                else
+                    window.open(url, '_self');
             },
             Submenu: function (sub) {
                 this.main_menu = sub;
