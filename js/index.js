@@ -164,7 +164,7 @@ window.onload = () => {
         {
             name: 'electron',
             src: './img/electron_title.png',
-            url: 'https://github.com/ArcherGrey/electron_notebook'
+            url: 'https://github.com/ArcherGrey/electron_index'
         }
     ];
     initializeContent(menu, main);
