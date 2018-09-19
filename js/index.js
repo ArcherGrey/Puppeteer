@@ -159,7 +159,7 @@ window.onload = () => {
         {
             name: 'anime',
             src: './img/anime_title.png',
-            url: ''
+            url: 'https://github.com/ArcherGrey/anime'
         },
         {
             name: 'electron',

@@ -63,6 +63,7 @@
 - js 变量提升
 - outerhtml与innerhtml什么区别 
 - ES6 新特性
+- **anime 相关**
  
 ## 一些有意思的网站
 
