@@ -168,6 +168,17 @@ window.onload = () => {
         }
     ];
     initializeContent(menu, main);
+
+    // 首页动画
+    var path = anime.path('path');
+
+    anime({
+        targets: 'path',
+        strokeDashoffset: [anime.setDashoffset, 0],
+        loop: true,
+        easing: 'linear',
+        duration: 5000
+    });
 }
 
 function initializeContent(menu, main) {
