@@ -16,18 +16,13 @@
 - vue
 - element (配合vue的ui框架)
 - marked.js (解析markdown文件)
+- anime (动画库)
 
 ~~难点（和问题差不多以后都写在问题中）：~~
 - markdown文件读取（通过xhr来读取文件）
 - 菜单树形结果存储（对象数组）
 - 缓存xhr导致修改md没效果
 - 缓存js导致js修改没效果(未发现影响)
-
-## markdown 文件命名规则
-
-~~按照时间+第几篇:~~
-
-~~`xxxx_xx_xx_n`~~
 
 
 ## 问题 （加粗首要|删除线已完成|斜体待观察）
@@ -60,7 +55,7 @@
 - ~~json 和 jsonp 简介~~
 - Puppeteer
 - ~~闭包~~
-- js模块化
+- ~~js模块化~~
 - ~~js 作用域~~
 - js 变量提升
 - outerhtml与innerhtml什么区别 
