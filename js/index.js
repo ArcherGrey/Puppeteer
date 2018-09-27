@@ -51,6 +51,10 @@ window.onload = () => {
                         {
                             name: 'javascript 模块化',
                             src: './doc/frontend/javascript/javascript模块化.md'
+                        },
+                        {
+                            name: 'javascript 内存管理（堆和栈）',
+                            src: './doc/frontend/javascript/javascript内存管理（堆和栈）.md'
                         }
                     ]
                 },

@@ -51,7 +51,7 @@
 - electron 入门系列（记事本已完成，下一步需要做一个bs架构的，nodejs服务端）
 - 前端性能测试 
 - 循环引用（a.parent=b b.child=a）
-- 浅拷贝深拷贝
+- **浅拷贝深拷贝**
 - ~~json 和 jsonp 简介~~
 - Puppeteer
 - ~~闭包~~
@@ -60,7 +60,10 @@
 - js 变量提升
 - outerhtml与innerhtml什么区别 
 - ES6 新特性
-- **anime 相关**
+- anime 相关（官方文档翻译完待补充）
+- MVVM 简介
+- ~~javascript 内存管理~~
+- javascript 定时器
  
 ## 一些有意思的网站
 
