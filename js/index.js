@@ -55,6 +55,10 @@ window.onload = () => {
                         {
                             name: 'javascript 内存管理（堆和栈）',
                             src: './doc/frontend/javascript/javascript内存管理（堆和栈）.md'
+                        },
+                        {
+                            name: 'javascript深拷贝和浅拷贝',
+                            src: './doc/frontend/javascript/javascript深拷贝和浅拷贝.md'
                         }
                     ]
                 },
