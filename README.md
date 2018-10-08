@@ -77,6 +77,13 @@
 - []()
 - []()
   
+
+## 常用库、框架
+
+- jQuery
+- Vue [文档](https://cn.vuejs.org/index.html)
+- Puppeteer [文档](https://zhaoqize.github.io/puppeteer-api-zh_CN/#/)
+
  ## 注
 
  - dom 相关都放到 `html` 部分
