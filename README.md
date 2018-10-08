@@ -51,7 +51,7 @@
 - electron 入门系列（记事本已完成，下一步需要做一个bs架构的，nodejs服务端）
 - 前端性能测试 
 - 循环引用（a.parent=b b.child=a）
-- **浅拷贝深拷贝**
+- ~~浅拷贝深拷贝~~
 - ~~json 和 jsonp 简介~~
 - Puppeteer
 - ~~闭包~~
