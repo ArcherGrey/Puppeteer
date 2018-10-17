@@ -74,7 +74,7 @@
 - [git](https://git-scm.com/docs)
 - [经济指标](https://zh.tradingeconomics.com/)
 - [svg编辑器](https://editor.method.ac/)
-- []()
+- [npm中文文档](https://www.npmjs.com.cn/)
 - []()
   
 
