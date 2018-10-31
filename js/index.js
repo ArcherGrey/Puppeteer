@@ -92,7 +92,7 @@ window.onload = () => {
                     name: 'JQuery',
                     subs: [
                         {
-                            name: '犀利 JQuery （阅读总结-待补充）',
+                            name: '一步步实现jQuery',
                             src: './doc/frontend/jquery/xilijquery.md'
                         }
                     ]
