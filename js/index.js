@@ -158,6 +158,15 @@ window.onload = () => {
                             src: "./1.md"
                         }
                     ]
+                },
+                {
+                    name: 'C#',
+                    subs: [
+                        {
+                            name: "ASP.NET MVC4 开发指南",
+                            src: "./doc/backend/CSharp/netmvc_kfzn.md"
+                        }
+                    ]
                 }
             ]
         }
