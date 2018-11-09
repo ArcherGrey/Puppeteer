@@ -160,11 +160,15 @@ window.onload = () => {
                     ]
                 },
                 {
-                    name: 'C#',
+                    name: 'C# 开发指南（基础知识）',
                     subs: [
                         {
-                            name: "ASP.NET MVC4 开发指南",
-                            src: "./doc/backend/CSharp/netmvc_kfzn.md"
+                            name: "MVC 基本概念",
+                            src: "./doc/backend/CSharp_kfzn/MVC.md"
+                        },
+                        {
+                            name: "网址路由",
+                            src: "./doc/backend/CSharp_kfzn/route.md"
                         }
                     ]
                 }
