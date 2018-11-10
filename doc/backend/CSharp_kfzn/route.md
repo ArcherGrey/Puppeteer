@@ -50,4 +50,17 @@ public static void RegisterRoutes(RouteCollection routes)
 > 例1 输入网址 `http://localhost/Trace.axd/a/b/c/d/e`
 
 1. 比对顺序： `{resource}.axd` 比对得到 `Trace.axd`，`{*pathInfo}` 比对得到 `a/b/c/d/e` ，所有 `RouteValue` 都比对成功，所以这一次 `HTTP` 要求会由此网址路由提供服务
-2. 比对结构： 该网址以 `routes.IgnoreRoute` 扩充方法进行比对成功，所以 `Routing` 模块不会将本次 `HTTP` 要求给 `ASP.NET MVC` 运行，而是将`HTTP` 重新交给 `IIS` 的其他 `HTTP` 模块处理
+2. 比对结果： 该网址以 `routes.IgnoreRoute` 扩充方法进行比对成功，所以 `Routing` 模块不会将本次 `HTTP` 要求给 `ASP.NET MVC` 运行，而是将`HTTP` 重新交给 `IIS` 的其他 `HTTP` 模块处理
+
+> 例2 输入网址 `http://localhost/Trace.axd`
+
+1. 对比顺序： `{resource}.axd` 比对得到 `Trace.axd`，`{*pathInfo}` 比对得到空字符串，所有都比对成功，由网址路由提供服务
+2. 比对结果： 该网址以 `routes.IgnoreRoute` 扩充方法进行比对成功，所以 `Routing` 模块不会将本次 `HTTP` 要求给 `ASP.NET MVC` 运行，而是将`HTTP` 重新交给 `IIS` 的其他 `HTTP` 模块处理
+
+> 例3 输入网址 `http://localhost/Member/Detail?id=123`
+
+1. 比对顺序： `{resource}.axd` 比对失败，接着跳到下一段 `routes.MapRoute`　的　`{controller}/{action}/{id}` 网址格式，`Member` 比对到 `{controller}` ，`Detail` 比对得到 `{action}` ，接着的 `?id=123` 不算网址路径的一部分，而属于 `QueryString` 的范围，所有的网址路径都已经比对完毕，剩下的 `{id}` 没有比对到，网址路由会自动读取 `default` 具名参数里的设置，取得默认值 `UrlParameter.Optional`，所有的 `RouteValue` 都比对成功，所以这一次 `HTTP` 请求会要求网址路由提供服务
+2. 比对结果： 该网址以 `routes.MapRoute` 扩充方法进行比对成功，因此 `Routing` 模块将会把此次 `HTTP` 要求委托给 `MvcHandler` 负责处理， `MvcHandler` 会通过当前已经取得的 `RouteValue` 路由参数查找对应的 `Controller` 和 `Action` 来运行程序，所以此时就会去运行 `MemberController` 控制器中的 `Detail` 动作
+
+<font color='red'>注： 必须所有参数都完全符合才算是比对成功，比对失败就会跳至下一条网址路由规则继续比对，如果所有路由规则都比对失败的话，那么这次请求就会交由 `IIS` 的其他 `HTTP` 模块负责处理</font>
+
