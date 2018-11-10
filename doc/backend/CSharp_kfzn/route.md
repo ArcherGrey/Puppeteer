@@ -1,8 +1,9 @@
-# 网址路由
+# 网址路由和MVC基本流程
 
 - [网址路由](#2)
   - [默认网址路由](#2.1)
   - [路由过程](#2.2)
+  - [`MVC` 运行生命周期](#2.3)
 
 <span id='2'></span>
 ## 网址路由
@@ -63,4 +64,14 @@ public static void RegisterRoutes(RouteCollection routes)
 2. 比对结果： 该网址以 `routes.MapRoute` 扩充方法进行比对成功，因此 `Routing` 模块将会把此次 `HTTP` 要求委托给 `MvcHandler` 负责处理， `MvcHandler` 会通过当前已经取得的 `RouteValue` 路由参数查找对应的 `Controller` 和 `Action` 来运行程序，所以此时就会去运行 `MemberController` 控制器中的 `Detail` 动作
 
 <font color='red'>注： 必须所有参数都完全符合才算是比对成功，比对失败就会跳至下一条网址路由规则继续比对，如果所有路由规则都比对失败的话，那么这次请求就会交由 `IIS` 的其他 `HTTP` 模块负责处理</font>
+
+<span id='2.3'></span>
+### `MVC` 运行生命周期
+
+1. 网址路由比对
+2. 运行 `Controller` 和 `Action`
+3. 运行 `View` 并返回结果
+
+
+
 

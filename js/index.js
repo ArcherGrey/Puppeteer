@@ -167,7 +167,7 @@ window.onload = () => {
                             src: "./doc/backend/CSharp_kfzn/MVC.md"
                         },
                         {
-                            name: "网址路由",
+                            name: "网址路由和 MVC 基本流程",
                             src: "./doc/backend/CSharp_kfzn/route.md"
                         }
                     ]
