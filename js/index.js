@@ -169,6 +169,11 @@ window.onload = () => {
                         {
                             name: "网址路由和 MVC 基本流程",
                             src: "./doc/backend/CSharp_kfzn/route.md"
+                        },
+                        ,
+                        {
+                            name: "Model 相关技术",
+                            src: "./doc/backend/CSharp_kfzn/model.md"
                         }
                     ]
                 }
