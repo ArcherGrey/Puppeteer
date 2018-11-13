@@ -1,1 +1,92 @@
 # `Controller` 相关技术
+
+- [概念](#1)
+- [类别和方法](#2)
+- [运行过程](#3)
+- [动作方法选择器](#4)
+- [`ActionResult`](#5)
+  - [`ViewResult`](#5.1)
+
+<span id='1'></span>
+## 概念
+`MVC` 的核心就是 `Controller`，负责处理浏览器的所有要求，并决定响应什么属性给浏览器
+
+<span id='2'></span>
+## 类别和方法
+
+`Controller` 本身就是一个类（`class`），其中有许多方法（`Method`），这些方法中只要是公开方法（`public method`）就会被视为一个动作（`Action`），只要有动作存在就可以通过动作接收客户端传来的要求然后决定应该响应的视图（`View`）。
+
+撰写 `Controller` 基本要求：
+- `Controller` 必须是公开类型 （`Public`）
+- 名称必须以 `Controller` 结尾
+- 必须继承自 `ASP.NET MVC` 内建的 `Controller` 类，或继承自实现 `IController` 接口的自定义类，或自行实现 `IController` 接口
+- 所有 `Action` 都必须是公开方法，该方法可以没有参数也可以有多个参数，所有非公开的方法都不会被视为一个 `Action`
+
+<span id='3'></span>
+## 运行过程
+
+1. 根据客户端的请求 `MvcHandler` 选中相应的 `Controller`
+2. 通过 `ActionInvoker` 选定适当的 `Action`，根据模型绑定机制将参数传入 `Action` 中；如果 `ActionInvoker` 找不到对应的 `Action`，默认会运行 `HandleUnknownAction`，会响应 `HTTP 404 找不到资源` 的错误消息
+3. `Action` 运行完成后回传 `ActionResult` 类型或者其他衍生类型，也可以使用 `.NET` 内建的基本数据类型（最后会被 `ASP.NET MVC` 自动转换成 `ContentResult`），如果 `Action` 声明成 `void`，就不回传任何数据
+4. `MvcHandler` 运行 `ActionResult` 提供的 `ExecuteResult` 方法，并将运行结果响应到客户端
+
+<span id='4'></span>
+## 动作方法选择器
+
+
+- `NonAction` 属性：
+```
+[NonAction]
+public ActionResult Index(){
+    return View();
+}
+```
+如果有该属性在 `Action` 方法上，就会告知 `ActionInvoker` 不要选定这个 `Action` 来运行，主要是用来保护特定方法不要发布到 `Web` 上，或者是功能尚未开发完成就要进行部署
+
+将 `Action` 方法的 `public` 修改为 `private`，也可以达成完全相同的目的
+```
+private ActionResult Index(){
+    return View();
+}
+```
+
+- `HTTP` 动词限定属性：
+`HttpGet`、`HttpPost`、`HttpDelete`、`HttpPut`、`HttpHead`、`HttpOption`、`HttpPatch` 
+
+如果再动作方法上使用 `HttpGet` 属性，就代表只有当客户端发送 `Http Get` 请求的时候，`ActionInvoker` 才会选定到这个 `Action`:
+```
+[HttpGet]
+public ActionResult Index(){
+    return View();
+}
+```
+
+如果什么动作限定属性都没有的话，不管客户端发送任意请求都会选定到对应的 `Action`
+
+这些属性最多的用途是，需要对 `post` 请求和 `get` 请求响应不同的结果
+
+<span id='5'></span>
+## `ActionResult`
+
+`ActionResult` 是 `Action` 运行后的回传类型，但是当 `Action` 回传 `ActionResult` 的时候，其实并不包含这个 `ActionResult` 的运行结果，而是包含运行时所需的数据，当 `MvcHandler` 从 `Controller` 取得 `ActionResult` 之后才会去运行出结果
+
+<span id='5.1'></span>
+### `ViewResult`
+
+`ViewResult` 是 `ASP.NET MVC` 中最常用的 `ActionResult`，用于回传一个标准的视图页面：
+```
+// 回传默认的视图页面
+public ActionResult About(){
+    return View();
+}
+
+// 响应指定视图页面
+public ActionResult About(){
+    return View("About");
+}
+```
+
+搜索目录：
+1. 在网站根目录下 `Views` 里查找第一层，默认搜索和 `Controller` 同名的目录
+2. 如果找不到就改为搜索 `Shared` 目录，里面通常会放置共享于多个 `Controller` 之间的 `View` 页面
+
