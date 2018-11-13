@@ -81,9 +81,7 @@ AttachDbFileName = D:\Data\MyDB1.mdf
 <span id='2.3'></span>
 ### 代码优先开发模式
 
-创建数据模型：
-
-1. 创建模型和创建通用 `C#` 类没有区别：
+创建数据模型和创建通用 `C#` 类没有区别：
 ```
 public class Book{
     public int Id {get;set;}
@@ -92,3 +90,26 @@ public class Book{
 }
 ```
 这段程序会自动在数据中创建一个名为 `Guestbook` 的表
+
+`Entity Framework` 自动创建数据库结构过程：
+1. 声明主键：在 `Entity Framework` 中声明主键，最简单的方式就是直接把属性名称设置为 `Id` 或者属性名称中有 `Id` ，并将该属性指派为 `int` 类型，代码优先模式会自动识别这个字段是主键，并加上自动编号的识别规格设置，
+如果不是这样命名就需要加上 `Key` 属性：
+```
+[Key]
+public int No { get; set; }
+```
+2. 声明必填字段：加上 `Required` 属性：
+```
+[Required]
+public string Name { get; set;}
+```
+3. 声明允许 `NULL` 字段：类型声明后加上一个 `?` :
+```
+public DateTime? CreatedOn { get; set;}
+```
+4. 声明字段长度：属性加上一个 `MaxLength`:
+```
+[MaxLength(5)]
+public string Name { get; set;}
+```
+

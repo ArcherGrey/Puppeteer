@@ -160,7 +160,7 @@ window.onload = () => {
                     ]
                 },
                 {
-                    name: 'C# 开发指南（基础知识）',
+                    name: 'ASP.NET MVC4 开发指南（阅读总结）',
                     subs: [
                         {
                             name: "MVC 基本概念",
@@ -170,10 +170,13 @@ window.onload = () => {
                             name: "网址路由和 MVC 基本流程",
                             src: "./doc/backend/CSharp_kfzn/route.md"
                         },
-                        ,
                         {
                             name: "Model 相关技术",
                             src: "./doc/backend/CSharp_kfzn/model.md"
+                        },
+                        {
+                            name: "Controller 相关技术",
+                            src: "./doc/backend/CSharp_kfzn/controller.md"
                         }
                     ]
                 }
