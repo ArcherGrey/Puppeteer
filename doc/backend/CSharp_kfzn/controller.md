@@ -6,6 +6,12 @@
 - [动作方法选择器](#4)
 - [`ActionResult`](#5)
   - [`ViewResult`](#5.1)
+  - [`PartialViewResult`](#5.2)
+  - [`EmptyResult`](#5.3)
+  - [`ContentResult`](#5.4)
+  - [`FileResult`](#5.5)
+  - [`JavaScriptResult`](#5.6)
+  
 
 <span id='1'></span>
 ## 概念
@@ -89,4 +95,103 @@ public ActionResult About(){
 搜索目录：
 1. 在网站根目录下 `Views` 里查找第一层，默认搜索和 `Controller` 同名的目录
 2. 如果找不到就改为搜索 `Shared` 目录，里面通常会放置共享于多个 `Controller` 之间的 `View` 页面
+
+<span id='5.2'></span>
+### `PartialViewResult`
+
+`PartialViewResult` 和 `ViewResult` 非常相似，但是无法为选中的 `View` 指派主版页面，如果想在页面中设计出更好的关注点分离特性，可以将页面中的另一部分独立成另一个动作 `Action` ，这时就可以利用 `PartialViewResult` 取得页面中的部分属性。
+
+在以 `Ajax` 为主的页面应用时，经常会用到 `PartialViewResult` 取得页面的部分属性。
+
+<span id='5.3'></span>
+### `EmptyResult`
+
+有些 `Action` 不需要回传任何数据，例如，想要在统计实时在线人数，从网页中动态发送一个请求，在 `Action` 里运行加总或者记录的动作，之后不回传任何数据，因为这个 `Action` 的主要目的就是统计数据而已。对于这种情况 `EmptyResult` 就非常合适。
+
+有两种使用方式：
+- 第一种：
+```
+public ActionResult OnlineUser(){
+    return new EmptyResult();
+}
+```
+- 第二种：
+```
+public void OnlineUser(){
+    return;
+}
+```
+
+<span id='5.4'></span>
+### `ContentResult`
+
+`ContentResult` 可以响应任何文字属性的结果，可以指定任意文字属性、属性类型（`Content-Type`）、文字编码（`Encoding`）。
+
+例子：响应一段 `XML` 文字，设置相应的 `Content-Type` 为 `text/xml`，并指定文字编码为 `Encoding.UTF8`:
+```
+public ActionResult GetXML(){
+    return Content("<ROOT><TEXT>123</TEXT></ROOT>","text/xml",System.Text.Encoding.UTF8);
+}
+```
+
+如果想单纯的响应一串 `UTF8` 编码的 `HTML` 字符串：
+```
+public ActionResult GetHTML(){
+    string strHTML = "..."
+    return Content(strHTML);
+}
+```
+
+还可以用另一种方法表达上例中简单的回传类型，就是直接把回传类型设置为 `string`，`ASP.NET MVC` 会自动判断从 `Action` 回传的类型，只要不是 `ActionResult` 的衍生类型，就会将回传的数据自动转换成 `ContentResult` 来输出：
+```
+public string Content(){
+    string strHTML = "...";
+    return strHTML;
+}
+```
+
+<span id='5.5'></span>
+### `FileResult`
+
+`FileResult` 可以响应任何文档属性，包括二进制个数的数据，例如图档、`pdf`、`Excel`、或者压缩文件等，可以传入文档路径、字节流等不同的属性，让 `ASP.NET MVC` 帮你将属性回传给客户端，还能指定回传时的属性类型（`Content-Type`）或者指定客户端下载时要显示的文件名等。
+
+`FileResult` 是一个抽象类型，具体共有三个：
+- `FilePathResult` : 响应一个实体文档的属性
+- `FileContentResult` : 响应一个 `byte[]` 属性
+- `FileStreamResult` : 响应一个 `Stream` 属性
+
+通过 `System.Web.Mvc.Controller` 提供的 `File` 辅助方法可以自动选定不同的 `FileResult` 响应
+
+例子：通过 `Action` 输出一个放在 `App_Data` 目录下的 `PNG` 图文件：
+```
+public ActionResult GetFile(){
+    return File(Server.MapPath("~/App_Data/UserA/Avatar.png"),"image/png");
+}
+```
+
+如果希望能够要求浏览器直接下载文件而不是直接在浏览器开启文件，也可以传入要求下载的文档名在第三个参数：
+```
+public ActionResult GetFile(){
+    // pdf 文档来自数据库
+    byte[] fileContent = GetFileByteArrayFromDB();
+    return File(fileContent,"application/pdf","xxx.pdf");
+    // 文件名是自定义的
+}
+```
+
+<span id='5.6'></span>
+### `JavaScriptResult`
+
+主要用途是响应 `javascript` 代码给浏览器（~~感觉很鸡肋啊。。为啥不直接放在前端~~），响应 `alert('ok')` 到客户端 :
+```
+public ActionResult JavaScript(){
+    return JavaScript("alert('ok')")
+}
+```
+
+和 `Ajax` 使用有关
+
+
+<span id='5.7'></span>
+### `JsonResult`
 
