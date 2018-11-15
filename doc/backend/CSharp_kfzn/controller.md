@@ -13,6 +13,9 @@
   - [`JavaScriptResult`](#5.6)
   - [`JsonResult`](#5.7)
   - [`RedirectResult`](#5.8)
+  - [`RedirectToRoute`](#5.9)
+  - [`HttpStatusCodeResult`](#5.10)
+  
   
 
 <span id='1'></span>
@@ -211,4 +214,29 @@ public ActionResult JSON(){
 <span id='5.8'></span>
 ### `RedirectResult`
 
-主要用途是运行重新导向到其他网址，基本上还是以
+主要用途是运行重新导向到其他网址：
+```
+public ActionResult Redirect(){
+    return Redirect("/Home/Index");
+}
+```
+
+`MVC 3` 之后内建了一个 `RedirectPermanent` 方法，可以让 `Action` 响应 `HTTP 301` 永久导向：
+```
+public ActionResult Redirect(){
+    return RedirectPermanent("/Home/Index");
+}
+```
+
+<span id='5.9'></span>
+### `RedirectToRoute`
+
+和 `RedirectResult` 类似，不过会自动运算所有现有的网址路由，并比对网址路由表中每一条规则
+
+<span id='5.10'></span>
+### `HttpStatusCodeResult`
+
+主要用途是回传特定的 `HTTP` 状态代码
+
+
+
