@@ -11,6 +11,8 @@
   - [`ContentResult`](#5.4)
   - [`FileResult`](#5.5)
   - [`JavaScriptResult`](#5.6)
+  - [`JsonResult`](#5.7)
+  - [`RedirectResult`](#5.8)
   
 
 <span id='1'></span>
@@ -195,3 +197,18 @@ public ActionResult JavaScript(){
 <span id='5.7'></span>
 ### `JsonResult`
 
+在默认情况下，任何以 `JsonResult` 回传的要求都不允许 `Get` 取得任何 `JSON` 信息：
+```
+public ActionResult JSON(){
+    return Json(new {
+        id = 1,
+        name = "will",
+        CreateOn = DateTime.Now
+    });
+}
+```
+
+<span id='5.8'></span>
+### `RedirectResult`
+
+主要用途是运行重新导向到其他网址，基本上还是以
