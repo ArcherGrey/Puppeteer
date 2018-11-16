@@ -15,6 +15,13 @@
   - [`RedirectResult`](#5.8)
   - [`RedirectToRoute`](#5.9)
   - [`HttpStatusCodeResult`](#5.10)
+  - [`HttpNotFoundResult`](#5.11)
+  - [`HttpUnauthorizedResult`](#5.12)
+- [`ViewData` | `ViewBag` | `TempData`](#6)
+  - [`ViewData`](#6.1)
+  - [`ViewBag`](#6.2)
+  - [`TempData`](#6.3)
+- [模型绑定](#7)
   
   
 
@@ -236,7 +243,83 @@ public ActionResult Redirect(){
 <span id='5.10'></span>
 ### `HttpStatusCodeResult`
 
-主要用途是回传特定的 `HTTP` 状态代码
+主要用途是回传特定的 `HTTP` 状态代码：
+```
+public ActionResult Create(FormCollection form){
+    return new HttpStatusCodeResult(201,"数据已经成功创建");
+}
+```
+
+
+<span id='5.11'></span>
+### `HttpNotFoundResult`
+
+专门用来响应 `HTTP 404` 错误：
+```
+public ActionResult Get(int id){
+    var data = GetDataFromDB(id);
+
+    if(data == null){
+        return HttpNotFound();
+    }else {
+        return View(data);
+    }
+}
+```
+
+<span id='5.12'></span>
+### `HttpUnauthorizedResult`
+
+专门用来响应 `HTTP 401` 拒绝访问的错误：
+```
+public ActionResult Get(int id){
+    if(CheckPermission(User.Identity.Name)){
+        var data = GetDataFromDB(id);
+        if(data == null){
+            return HttpNotFound();
+        }
+        else {
+            return View(data);
+        }
+    } 
+    else {
+        return new HttpUnauthorizedResult();
+    }
+}
+```
+
+<span id='6'></span>
+## `ViewData` | `ViewBag` | `TempData`
+
+控制器负责处理浏览器来的所有要求，并决定响应什么属性给浏览器，还负责协调 `Model` 和 `View` 之间的数据传递，下面介绍 `ASP.NET MVC` 几种传递数据给 `View` 的方式
+
+
+<span id='6.1'></span>
+### `ViewData`
+
+设置 `ViewData` 属性的时候，传入的 `Key` 必须是字符串类型，属性部分可以保存任意对象信息，还有个特性就是它只会存在这次的 `HTTP` 请求中，不像 `Session` 可以将数据带到下一个 `HTTP` 请求。
+
+<span id='6.2'></span>
+### `ViewBag`
+
+对 `ViewBag` 属性的任何访问操作最终还是对 `ViewData` 来进行操作，唯一的差别就是 `ViewBag` 是`dynamic`动态类型，可以少输入几个字符：
+```
+// ViewData
+ViewData["Message"] = "xxxx";
+// ViewBag
+ViewData.Message = "xxxx";
+```
+
+
+<span id='6.3'></span>
+### `TempData`
+
+`TempData` 和 `ViewData` 一样都是字典类型，区别在于它的内部是使用 `Session` 来保存信息，信息暂存一次网页请求。
+
+<span id='7'></span>
+## 模型绑定
+
+> `ASP.NET MVC` 通过模型绑定解析客户端传来的数据
 
 
 
