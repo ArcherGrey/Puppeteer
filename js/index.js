@@ -181,6 +181,10 @@ window.onload = () => {
                         {
                             name: "View 相关技术",
                             src: "./doc/backend/CSharp_kfzn/view.md"
+                        },
+                        {
+                            name: "Area 相关技术",
+                            src: "./doc/backend/CSharp_kfzn/area.md"
                         }
                     ]
                 }
