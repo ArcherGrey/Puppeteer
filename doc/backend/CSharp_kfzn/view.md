@@ -41,6 +41,7 @@
 从 `Action` 取得数据有两种方式：
 - 使用弱类型取得数据：`View` 页面不需要任何声明，数据可以从 `ViewData`、`ViewBag`、`TempData` 取得，也可以通过 `@Model` 属性取得 `ViewData.Model` 数据模型，类别是 `object` 也算是弱类型
 - 使用强类型取得数据：必须在 `View` 页面第一行使用 `@model` 引入一个 `View` 页面专用的数据模型
+
 ```
 @model MvcApplication5.Models.LoginModel
 
