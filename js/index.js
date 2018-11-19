@@ -114,6 +114,15 @@ window.onload = () => {
                             src: './1.md'
                         }
                     ]
+                },
+                {
+                    name: '可视化特效',
+                    subs: [
+                        {
+                            name: '粒子特效',
+                            src: './doc/frontend/visual/particle.md'
+                        }
+                    ]
                 }
             ]
         },
