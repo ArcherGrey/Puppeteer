@@ -28,12 +28,16 @@ html,body {
 `javascript`:
 ```
 
-var RENDERER = {
-  PARTICLE_COUNT: 1500,
-  PARTICLE_RADIUS: 1,
-  MAX_ROTATION_ANGLE: Math.PI / 60,
-  TRANSLATION_COUNT: 500,
 
+var RENDERER = {
+
+  // 基本参数
+  PARTICLE_COUNT: 1500, // 粒子个数
+  PARTICLE_RADIUS: 1, // 粒子半径
+  MAX_ROTATION_ANGLE: Math.PI / 60, // 最大旋转角度
+  TRANSLATION_COUNT: 500, // 
+
+  // 初始化
   init: function (strategy) {
     this.setParameters(strategy);
     this.createParticles();
@@ -42,14 +46,16 @@ var RENDERER = {
     this.bindEvent();
     this.drawFigure();
   },
+  // 设置参数
   setParameters: function (strategy) {
     this.$window = $(window);
-
     this.$container = $('#jsi-particle-container');
     this.width = this.$container.width();
     this.height = this.$container.height();
 
+    // 创建 canvas 区域
     this.$canvas = $('<canvas />').attr({ width: this.width, height: this.height }).appendTo(this.$container);
+    // 获取画图区域
     this.context = this.$canvas.get(0).getContext('2d');
 
     this.center = { x: this.width / 2, y: this.height / 2 };
@@ -60,9 +66,11 @@ var RENDERER = {
     this.translationCount = 0;
     this.theta = 0;
 
+    // 只提取策略函数
     this.strategies = strategy.getStrategies();
     this.particles = [];
   },
+  // 创建粒子
   createParticles: function () {
     for (var i = 0; i < this.PARTICLE_COUNT; i++) {
       this.particles.push(new PARTICLE(this.center));
@@ -87,6 +95,7 @@ var RENDERER = {
   },
   setupFigure: function () {
     for (var i = 0, length = this.particles.length; i < length; i++) {
+      // 设置每个点的坐标
       this.particles[i].setAxis(this.strategies[this.strategyIndex]());
     }
     if (++this.strategyIndex == this.strategies.length) {
@@ -94,7 +103,9 @@ var RENDERER = {
     }
     this.translationCount = 0;
   },
+  // 画图
   drawFigure: function () {
+    // 重复动画
     requestAnimationFrame(this.drawFigure);
 
     this.context.fillStyle = 'rgba(0, 0, 0, 0.2)';
