@@ -59,6 +59,10 @@ window.onload = () => {
                         {
                             name: 'javascript深拷贝和浅拷贝',
                             src: './doc/frontend/javascript/javascript深拷贝和浅拷贝.md'
+                        },
+                        {
+                            name: '== 和 ===',
+                            src: './doc/frontend/javascript/equal.md'
                         }
                     ]
                 },
