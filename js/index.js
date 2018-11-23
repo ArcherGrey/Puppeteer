@@ -45,19 +45,19 @@ window.onload = () => {
                             src: './doc/frontend/javascript/闭包.md'
                         },
                         {
-                            name: 'javascript 作用域、上下文、执行环境、作用域链',
+                            name: '作用域、上下文、执行环境、作用域链',
                             src: './doc/frontend/javascript/javascript作用域.md'
                         },
                         {
-                            name: 'javascript 模块化',
+                            name: '模块化',
                             src: './doc/frontend/javascript/javascript模块化.md'
                         },
                         {
-                            name: 'javascript 内存管理（堆和栈）',
+                            name: '内存管理（堆和栈）',
                             src: './doc/frontend/javascript/javascript内存管理（堆和栈）.md'
                         },
                         {
-                            name: 'javascript深拷贝和浅拷贝',
+                            name: '深拷贝和浅拷贝',
                             src: './doc/frontend/javascript/javascript深拷贝和浅拷贝.md'
                         },
                         {
@@ -131,36 +131,6 @@ window.onload = () => {
             ]
         },
         {
-            name: '代码规范',
-            subs: [
-                {
-                    name: '通用',
-                    subs: [
-                        {
-                            name: "什么时候要写注释如何写好注释",
-                            src: "./doc/frontend/CodeF/zs.md"
-                        },
-                        {
-                            name: "代码的格式",
-                            src: "./doc/frontend/CodeF/dmgs.md"
-                        },
-                        {
-                            name: "代码整洁之道",
-                            src: "./doc/frontend/CodeF/dmzj.md"
-                        },
-                        {
-                            name: "如何写好对象和数据结构",
-                            src: "./doc/frontend/CodeF/sjjg.md"
-                        },
-                        {
-                            name: "如何写好函数",
-                            src: "./doc/frontend/CodeF/2018_7_27_1.md"
-                        }
-                    ]
-                }
-            ]
-        },
-        {
             name: '后端',
             subs: [
                 {
@@ -198,6 +168,36 @@ window.onload = () => {
                         {
                             name: "Area 相关技术",
                             src: "./doc/backend/CSharp_kfzn/area.md"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            name: '代码规范',
+            subs: [
+                {
+                    name: '通用',
+                    subs: [
+                        {
+                            name: "什么时候要写注释如何写好注释",
+                            src: "./doc/frontend/CodeF/zs.md"
+                        },
+                        {
+                            name: "代码的格式",
+                            src: "./doc/frontend/CodeF/dmgs.md"
+                        },
+                        {
+                            name: "代码整洁之道",
+                            src: "./doc/frontend/CodeF/dmzj.md"
+                        },
+                        {
+                            name: "如何写好对象和数据结构",
+                            src: "./doc/frontend/CodeF/sjjg.md"
+                        },
+                        {
+                            name: "如何写好函数",
+                            src: "./doc/frontend/CodeF/2018_7_27_1.md"
                         }
                     ]
                 }

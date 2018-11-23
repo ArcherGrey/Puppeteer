@@ -13,19 +13,42 @@
 - 系列文档放在首页跑马灯中
 
 技术栈：
-- vue
-- element (配合vue的ui框架)
-- marked.js (解析markdown文件)
-- anime (动画库)
+- `vue`
+- `element` (配合 `vue` 的 `ui` 框架)
+- `marked.js` (解析 `markdown` 文件)
+- `anime` (动画库)
 
-~~难点（和问题差不多以后都写在问题中）：~~
-- markdown文件读取（通过xhr来读取文件）
-- 菜单树形结果存储（对象数组）
-- 缓存xhr导致修改md没效果
-- 缓存js导致js修改没效果(未发现影响)
+---
+## 内容目录
 
-
+- 前端
+  - 开发工具
+    - sublime 安装和使用技巧
+  - javascript 知识点
+    - 包装对象
+    - 原型链
+    - `this`
+    - `call | apply | bind`
+    - 特殊技巧 (待补充)
+    - `json` 和 `jsonp`
+    - 闭包
+    - 作用域、上下文、执行环境、作用域链
+    - 模块化
+    - 内存管理（堆和栈）
+    - 深拷贝和浅拷贝
+    - `==` 和 `===`
+  - `WebGL`
+    - `[threejs入门-1] hello,Three.js`
+    - `[threejs入门-2] 创造一个世界`
+    - `[threejs入门-3] 探索和互动`
+- 后端
+- 代码规范
+---
 ## 问题 （加粗首要|删除线已完成|斜体待观察）
+- ~~markdown文件读取（通过xhr来读取文件）~~
+- ~~菜单树形结果存储（对象数组）~~
+- ~~缓存xhr导致修改md没效果~~
+- 缓存js导致js修改没效果(未发现影响)
 - ~~待添加代码规范文档内容（已完成待观察)~~
 - **考虑添加一个动画（无限剑制）位置待定**
 - **网页top功能添加**
@@ -46,7 +69,7 @@
 - ~~跑马灯大小比例待调整~~
 - ~~跑马灯中图片添加点击事件无效~~(img不是组件不需要native绑定事件)
 - ~~需要调整一下目录结构~~
-
+---
 ## 待学习的内容
 - electron 入门系列（记事本已完成，下一步需要做一个bs架构的，nodejs服务端）
 - 前端性能测试 
@@ -66,7 +89,7 @@
 - javascript 定时器
 - C# 循环内定义还是循环外
 - **mvc 开发指南 （ p344）**
-
+---
 ## 一些有意思的网站
 
 - [你不需要jquery](https://blog.garstasio.com/you-dont-need-jquery/)
@@ -80,7 +103,7 @@
 - [Cloud 9 是一个非常强大的在线代码编辑器，它包含了一个完整的 Ubuntu 环境，所有的一切都是运行在云端](http://c9.io)
 - [前端资源教程](https://cnodejs.org/topic/56ef3edd532839c33a99d00e)
   
-
+---
 ## 常用库、框架
 
 - jQuery
@@ -88,7 +111,7 @@
 - Puppeteer [文档](https://zhaoqize.github.io/puppeteer-api-zh_CN/#/)
 - express [文档](https://expressjs.com/en/4x/api.html)
 - nodejs 
-
+---
  ## 注
 
  - dom 相关都放到 `html` 部分
