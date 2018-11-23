@@ -127,6 +127,15 @@ window.onload = () => {
                             src: './doc/frontend/visual/particle.md'
                         }
                     ]
+                },
+                {
+                    name: 'Express',
+                    subs: [
+                        {
+                            name: '应用程序生成器',
+                            src: './doc/frontend/express/generator.md'
+                        }
+                    ]
                 }
             ]
         },
