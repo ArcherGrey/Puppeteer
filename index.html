@@ -17,6 +17,7 @@
 
 
   <!-- 当前网页需要的脚本和样式文件 -->
+  <!-- 会被缓存导致修改无效，本地会出现这种情况，上传到 github 不会出现这样的情况，可能是服务器设置 -->
   <script src="./js/index.js?阿3"></script>
   <link rel="stylesheet" href="./css/index.css?sd">
 
@@ -104,7 +105,8 @@
               </div>
               <div id="main_menu" v-if="main_menu">
                 <transition-group name="list-complete" tag="p">
-                  <el-button v-bind:type="button_types[index % 6]" v-for="(item, index) in main_menu.subs" v-bind:key="item.name" @click.native="ReadMarkdown(item.src)">{{item.name}}</el-button>
+                  <el-button v-bind:type="button_types[index % 6]" v-for="(item, index) in main_menu.subs" v-bind:key="item.name"
+                    @click.native="ReadMarkdown(item.src)">{{item.name}}</el-button>
                 </transition-group>
               </div>
             </article>
@@ -119,5 +121,4 @@
     </el-container>
   </div>
 </body>
-
 </html>

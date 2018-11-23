@@ -44,6 +44,7 @@ npm install
 ```
 
 3. 启动项目：
+
 ```
 // MacOs & Linux
 DEBUG = test:* npm start
@@ -56,6 +57,7 @@ set DEBUG=test:* &npm start
 
 
 通过生成器创建的应用一般有如下目录（带模板）：
+
 ```
 .
 ├── app.js
@@ -75,4 +77,24 @@ set DEBUG=test:* &npm start
     ├── index.pug
     └── layout.pug
 
+```
+
+通过生成器创建的应用一般有如下目录（不带模板）：
+
+```
+.
+├── app.js
+├── bin
+│   └── www
+├── package.json
+├── public
+│   ├── images
+│   ├── javascripts
+│   ├── index.html
+│   └── stylesheets
+│       └── style.css
+│
+└── routes
+    ├── index.js
+    └── users.js
 ```
