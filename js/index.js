@@ -136,6 +136,15 @@ window.onload = () => {
                             src: './doc/frontend/express/generator.md'
                         }
                     ]
+                },
+                {
+                    name: 'nodejs',
+                    subs: [
+                        {
+                            name: 'nodemon 简介（自动重启应用）',
+                            src: './doc/frontend/nodejs/nodemon.md'
+                        }
+                    ]
                 }
             ]
         },
