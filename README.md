@@ -146,8 +146,10 @@
 - jQuery
 - Vue [文档](https://cn.vuejs.org/index.html)
 - Puppeteer [文档](https://zhaoqize.github.io/puppeteer-api-zh_CN/#/)
-- express [文档](https://expressjs.com/en/4x/api.html)
 - nodejs 
+  - express [文档](https://expressjs.com/en/4x/api.html)
+    - pug 模板引擎 [文档](https://pug.bootcss.com/api/getting-started.html)
+
 ---
  ## 注
 
