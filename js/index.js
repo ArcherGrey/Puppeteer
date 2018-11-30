@@ -63,6 +63,10 @@ window.onload = () => {
                         {
                             name: '== 和 ===',
                             src: './doc/frontend/javascript/equal.md'
+                        },
+                        {
+                            name: '是否使用分号结尾的问题',
+                            src: './doc/frontend/javascript/semicolon.md'
                         }
                     ]
                 },
