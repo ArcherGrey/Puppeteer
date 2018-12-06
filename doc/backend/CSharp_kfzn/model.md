@@ -5,6 +5,7 @@
   - [`ORM` 简介](#2.1)
   - [`LocalDB` 介绍](#2.2)
   - [代码优先开发模式](#2.3)
+- [数据注解](#3)
 
 
 <span id='1'></span>
@@ -112,4 +113,79 @@ public DateTime? CreatedOn { get; set;}
 [MaxLength(5)]
 public string Name { get; set;}
 ```
+
+---
+
+<span id='3'></span>
+## 数据注解
+
+作用：
+- 数据映射：把类通过 `EntityFramework` 映射成对应的表
+- 数据验证：在服务器端和客户端验证数据的有效性
+- 数据显示：在 `View` 显示相应的数据
+
+相关的命名空间：
+- `System.ComponentModel.DataAnnotations`
+- `System.ComponentModel.DataAnnotations.Schema`
+- `System.Web.Mvc`
+- `System.Web.Security`
+
+`DataAnnotations` 包含主要的数据注解，`Schema` 包含一些数据映射的数据注解，`Mvc` 中包含字符、数组、数值长度、属性比较的数据注解，`Security` 包含 `MemberShipPassword` 注解特性。
+
+数据映射和验证相关：
+
+|名称|说明|
+|:---:|:---:|
+`[Required]`|必填字段
+`[MaxLength]`|指定属性中允许的数组或字符串数据的最大长度
+`[MinLength]`|指定属性中允许的数组或字符串数据的最小长度
+`[StringLength]`|指定最小和最大字符长度
+`[Range]`|指定数值范围
+
+数据验证相关：
+
+|名称|说明|
+|:---:|:---:|
+`[Remote]`|使用 `jQuery` 验证插件远程验证程序的特性
+`[FileExtension]`|验证文件扩展名
+`[Compare]`|比较两个属性的值
+`[RegularExpression]`|使用正则表达式验证
+`[CustomValidation]`|自定义验证方法
+`[DataType]`|指定要与数据字段关联的附加类型的名称
+`[EmailAddress]`|电子邮件地址
+`[Phone]`|电话
+`[CreditCard]`|信用卡号
+`[url]`|验证 `url`
+`[MemberShipPassword]`|验证密码字段是否满足成员资格提供程序的当前密码要求
+
+数据映射相关：
+
+|名称|说明|
+|:---:|:---:|
+`[Key]`|主键字段
+`[Column]`|数据库列属性映射
+`[NotMapped]`|不要创建对应的字段
+`[Table]`|指定类将映射到的数据库表
+`[ForeignKey]`|表示关系中用作外键的属性
+`[DatabaseGenerated]`|指定数据库生成属性值的方式
+
+数据显示相关：
+
+|名称|说明|
+|:---:|:---:|
+`[DisplayName]`|指定本地化的字符串（习惯用语类）
+`[Display]`|指定本地化的字符串（习惯用语属性）
+`[DisplayFormat]`|设置数据字段的格式
+`[ReadOnly]`|指定该特性所绑定的属性是只读属性还是读/写属性
+`[EditAble]`|指示数据字段是否可编辑
+`[HiddenInput]`|指示是否将属性值或字段值呈现为隐藏的元素
+`[ScaffoldColumn]`|指定类或数据列是否使用基架
+`[UIHint]`|指定动态数据用来显示数据字段的模板
+
+其他：
+
+|名称|说明|
+|:---:|:---:|
+`[DisplayColumn]`|将所引用的表中显示的列指定为外键列
+`[Description]`|可视化设计器在引用组件成员时可以显示指定的说明
 
