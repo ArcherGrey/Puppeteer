@@ -109,7 +109,7 @@ window.onload = () => {
                     name: 'html',
                     subs: [
                         {
-                            name: '浏览器渲染',
+                            name: '浏览器内部工作原理',
                             src: './doc/frontend/html/render.md'
                         }
                     ]
