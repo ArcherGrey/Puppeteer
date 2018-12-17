@@ -109,8 +109,8 @@ window.onload = () => {
                     name: 'html',
                     subs: [
                         {
-                            name: 'test',
-                            src: './1.md'
+                            name: '浏览器渲染',
+                            src: './doc/frontend/html/render.md'
                         }
                     ]
                 },
