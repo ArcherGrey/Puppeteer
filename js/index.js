@@ -233,9 +233,23 @@ window.onload = () => {
                     ]
                 }
             ]
+        },
+        {
+            name: '文档',
+            subs: [
+                {
+                    name: 'markdown',
+                    subs: [
+                        {
+                            name: "markdown 流程图语法 flowchar",
+                            src:"./doc/document_tool/markdown/flowchar.md"
+                        }
+                    ]
+                }
+            ]
         }
     ];
-
+    
     var main = [
         {
             name: 'anime',
