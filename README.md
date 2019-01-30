@@ -150,7 +150,9 @@
 - [npm中文文档](https://www.npmjs.com.cn/)
 - [Cloud 9 是一个非常强大的在线代码编辑器，它包含了一个完整的 Ubuntu 环境，所有的一切都是运行在云端](http://c9.io)
 - [前端资源教程](https://cnodejs.org/topic/56ef3edd532839c33a99d00e)
-  
+- [pagespeed 前端性能测试](http://developers.google.cn/speed/pagespeed/insights/)
+
+
 ---
 ## 常用库、框架
 
