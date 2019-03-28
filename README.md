@@ -170,4 +170,15 @@
 
  - dom 相关都放到 `html` 部分
  
+--- 
+
+## vscode 插件
+
+注：部分插件需要命令打开 `F1` 例如 json 编辑器 命令搜索json 开启
+
+- Json Editor ： Json 可视化编辑器
+- ESLint
+- Markdown Preview Enhanced  流程图可视化
+
+
 
