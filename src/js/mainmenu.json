@@ -1,0 +1,12 @@
+[
+    {
+        "name": "anime",
+        "src": "./img/anime_title.png",
+        "url": "https://github.com/ArcherGrey/anime"
+    },
+    {
+        "name": "electron",
+        "src": "./img/electron_title.png",
+        "url": "https://github.com/ArcherGrey/electron_index"
+    }
+]
