@@ -11,7 +11,7 @@
 - **markdown的锚点跳转标签必须是英文小写(全部都要)**
 - **锚点多个单词之间可以使用`-`连接**
 
-> `index.js` 中添加新文章
+
 
 [地址](https://archergrey.github.io/document/)
 
@@ -24,6 +24,7 @@
 - `element` (配合 `vue` 的 `ui` 框架)
 - `marked.js` (解析 `markdown` 文件)
 - `anime` (动画库)
+- `webpack`
 
 ---
 ## 内容目录
