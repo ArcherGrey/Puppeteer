@@ -24,9 +24,16 @@
 - `anime` (动画库)
 - `webpack` (打包工具)
 
+前端常用变量（文档链接）保存在 `json` 中：
+- `mainmenu.json` 保存中间跑马灯图片链接
+- `sidemenu.json` 保存侧边选中后的文档链接，添加新的文档就在这个文件中添加，通过 `json` 可视化编辑器添加很方便
+
+
+
 ---
 ## 内容目录
 
+<font color='red'>注： `dom` 相关都放到 `html` 部分</font>
 
 
 - 前端
@@ -153,21 +160,24 @@
 
 
 ---
-## 常用库、框架
+## 常用库、框架、工具
 
 - jQuery
 - Vue [文档](https://cn.vuejs.org/index.html)
-- Puppeteer [文档](https://zhaoqize.github.io/puppeteer-api-zh_CN/#/)
+- 模拟操作
+  - Puppeteer [文档](https://zhaoqize.github.io/puppeteer-api-zh_CN/#/)
 - nodejs 
   - express [文档](https://expressjs.com/en/4x/api.html)
-    - pug 模板引擎 [文档](https://pug.bootcss.com/api/getting-started.html)
-- markdown 流程图显示可以使用 vscode 的扩展 Markdown Preview Enhanced 使用这个来预览
-- webpack [官网](https://www.webpackjs.com/)
+- 网页模板 
+  - pug 模板引擎 [文档](https://pug.bootcss.com/api/getting-started.html)
+- 打包工具
+  - webpack [官网](https://www.webpackjs.com/)
+- 开发工具
+  - sublime : 最轻便
+  - atom：有点厚重
+  - vscode：综合最好
 
----
- ## 注
 
- - dom 相关都放到 `html` 部分
  
 --- 
 
