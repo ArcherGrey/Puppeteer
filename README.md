@@ -6,25 +6,23 @@
 
 ~~gitbook 必须在官网上面注册然后上传到上面，用官网做为服务器~~
 
+[地址](https://archergrey.github.io/document/dist)
 
 `markdown`：
 - **markdown的锚点跳转标签必须是英文小写(全部都要)**
 - **锚点多个单词之间可以使用`-`连接**
 
 
-
-[地址](https://archergrey.github.io/document/)
-
 布局：
 - 左侧菜单中是类别目录，点击后再中央区域显示具体文章
 - 系列文档放在首页跑马灯中
 
-相关：
+技术相关：
 - `vue`
 - `element` (配合 `vue` 的 `ui` 框架)
 - `marked.js` (解析 `markdown` 文件)
 - `anime` (动画库)
-- `webpack`
+- `webpack` (打包工具)
 
 ---
 ## 内容目录

@@ -7,7 +7,7 @@
         "subs": [
           {
             "name": "sublime 安装和使用技巧",
-            "src": "/doc/frontend/javascript/sublime.md"
+            "src": "./doc/frontend/javascript/sublime.md"
           }
         ]
       },
