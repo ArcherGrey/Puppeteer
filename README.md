@@ -1,10 +1,11 @@
 # 文档合集
 
-单页面
+单页面  静态页面
 
-~~看到 `gitbook` 好像能搞出类似的效果，准备试一试~~
-
-~~gitbook 必须在官网上面注册然后上传到上面，用官网做为服务器~~
+安装：
+- 需要 nodejs 环境
+- npm install 
+- npm start
 
 [地址](https://archergrey.github.io/document/dist)
 
