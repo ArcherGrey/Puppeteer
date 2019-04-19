@@ -1,11 +1,9 @@
 import '../css/index.css';
-// import '../../public'
 import sidemenu from './sidemenu.json'
 import mainmenu from './mainmenu.json'
+import printMe from '../print.js'
 
-debugger
-// document.write(docs.color)
-
+printMe();
 
 window.onload = () => {
     
@@ -59,7 +57,6 @@ function initializeContent(menu, main) {
                 this.$message('微信：douniwanzai 欢迎单身妹子加我');
             },
             ReadMarkdown: function (filename) {
-                debugger
                 // 读取 markdown 文件并且修改内容
                 var xhr = new XMLHttpRequest();
                 var nowTime = new Date().getTime();//获取当前时间作为随机数
