@@ -25,7 +25,7 @@
     <el-container>
       <!-- 左边菜单 -->
       <el-aside width="fit-content" @mouseover.native="Showmenu" @mouseout.native="Hidemenu">
-        <el-menu background-color="lightgrey" text-color="#333" active-text-color="#333" :collapse="isCollapse" id='menu'>
+        <el-menu unique-opened="true" background-color="lightgrey" text-color="#333" active-text-color="#333" :collapse="isCollapse" id='menu'>
           <el-submenu :index="index" v-for="(top,index) in tops">
             <template slot="title">
               <i class="el-icon-menu">
