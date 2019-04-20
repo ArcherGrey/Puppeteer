@@ -18,7 +18,7 @@ module.exports = {
     // 应用输出
     output: {
         // 文件名模板
-        filename: '[name].[hash].bundle.js',
+        filename: '[name].bundle.js',
         // 所有输出文件的目标路径
         path: path.resolve(__dirname, 'dist'),
         // 所有文件的目录
