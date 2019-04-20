@@ -6,7 +6,7 @@ import printMe from '../print.js'
 printMe();
 
 window.onload = () => {
-    
+
     initializeContent(sidemenu, mainmenu);
 
     // 首页动画
@@ -27,6 +27,7 @@ function initializeContent(menu, main) {
         data: function () {
             return {
                 input: '',
+                select: '',
                 isCollapse: true,
                 tops: menu,
                 series: main,

@@ -23,10 +23,10 @@
 <body>
   <div id="content">
     <el-container>
+      <!-- 左边菜单 -->
       <el-aside width="fit-content" @mouseover.native="Showmenu" @mouseout.native="Hidemenu">
-
         <el-menu background-color="lightgrey" text-color="#333" active-text-color="#333" :collapse="isCollapse" id='menu'>
-          <el-submenu index="1" v-for="top in tops">
+          <el-submenu :index="index" v-for="(top,index) in tops">
             <template slot="title">
               <i class="el-icon-menu">
                 <span class="top">
@@ -35,7 +35,7 @@
               </i>
             </template>
             <el-menu-item-group>
-              <el-menu-item :title="sub.name" v-for="sub in top.subs" @click.native="Submenu(sub)" index="1">
+              <el-menu-item :title="sub.name" v-for="sub in top.subs" @click.native="Submenu(sub)" >
                 <i class="el-icon-circle-plus-outline"> </i>
                 <span>
                   {{sub.name}}
@@ -45,27 +45,24 @@
           </el-submenu>
         </el-menu>
       </el-aside>
+      <!-- 左边 -->
       <el-container>
+        
+        <!-- 顶部 -->
         <el-header>
-          <el-dropdown>
-            <span class="el-dropdown-link">
-              下拉菜单
-              <i class="el-icon-arrow-down el-icon--right"></i>
-            </span>
-            <el-dropdown-menu slot="dropdown">
-              <el-dropdown-item>黄金糕</el-dropdown-item>
-              <el-dropdown-item>狮子头</el-dropdown-item>
-              <el-dropdown-item>螺蛳粉</el-dropdown-item>
-              <el-dropdown-item disabled>双皮奶</el-dropdown-item>
-              <el-dropdown-item divided @click.native="Goto('')">首页</el-dropdown-item>
-            </el-dropdown-menu>
-          </el-dropdown>
           <el-input v-model="input" placeholder="请输入内容" style="width: fit-content">
-
-
+            <el-select v-model="select" slot="prepend" placeholder="请选择">
+              <el-option label="标题" value="1"></el-option>
+              <!-- <el-option label="标签" value="2"></el-option> -->
+            </el-select>
             <el-button slot="append" type="primary" icon="el-icon-search" @click.native="Search">搜索</el-button>
           </el-input>
         </el-header>
+        <!-- 顶部 -->
+
+        <!-- --- -->
+
+        <!-- 中间 -->
         <el-main>
           <div class="main-center">
             <article class="markdown-body">
@@ -109,13 +106,20 @@
             </article>
           </div>
         </el-main>
+        <!-- 中间 -->
+
+        <!-- --- -->
+
+        <!-- 底部 -->
         <el-footer>
           <el-button :plain="true" @click.native="Info">
             <i class="el-icon-info" @click.native="Info"></i>
           </el-button>
         </el-footer>
+        <!-- 底部 -->
+
       </el-container>
     </el-container>
   </div>
-<script type="text/javascript" src="./main.bundle.js"></script></body>
+<script type="text/javascript" src="main.fc79f5489d6810639fce.bundle.js"></script></body>
 </html>
