@@ -91,6 +91,13 @@ function initializeContent(menu, main) {
                 if (document.getElementById('main_menu'))
                     document.getElementById('main_menu').style.display = '';
                 document.getElementById('mark').style.display = 'none';
+            },
+            BackToTop: function () {
+                var timer = setInterval(() => {
+                    document.getElementsByClassName("el-main")[0].scrollTop -= 100;
+                    if (document.getElementsByClassName("el-main")[0].scrollTop == 0)
+                        clearInterval(timer);
+                }, 40)
             }
         }
     })
