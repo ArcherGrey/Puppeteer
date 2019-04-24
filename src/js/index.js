@@ -30,9 +30,15 @@ function initializeContent(menu, main) {
                 series: main, // 首页跑马灯菜单
                 main_menu: null, // 点击左侧菜单后子菜单
                 button_types: ["primary", "success", "info", "warning", "danger", ""], // 按钮类型
-                isClickSideMenu: 'false', // 是否点击子菜单
+                isClickSideMenu: 'false', // 是否点击左侧菜单
                 isIndex: 'true', // 是否是首页
+                isClickSubMenu: 'false', // 是否点击了子菜单
                 markText: '',// mark 的内容
+                toptitle: '', // 顶级标题
+                subtitle: '', // 次级标题
+                title: '', // 最低级标题
+                breadcrumb_sub: '', // 面包屑标签参数
+                breadcrumb_index: '', // 面包屑标签参数
 
             }
         },
@@ -58,7 +64,13 @@ function initializeContent(menu, main) {
                 return {
                     display: this.isIndex == "true" ? '' : 'none'
                 }
-            }
+            },
+            styleTitle: function () {
+                // 样式
+                return {
+                    display: this.isClickSubMenu == "true" ? '' : 'none'
+                }
+            },
         },
         methods: {
             Search: function () {
@@ -77,13 +89,13 @@ function initializeContent(menu, main) {
             Info: function () {
                 this.$message('微信：douniwanzai 欢迎单身妹子加我');
             },
-            ReadMarkdown: function (filename) {
+            ReadMarkdown: function (filename, title) {
                 // 读取 markdown 文件并且修改内容
                 var xhr = new XMLHttpRequest();
                 var nowTime = new Date().getTime();//获取当前时间作为随机数
                 var url = filename + '?time=' + nowTime;
                 var _this = this;
-
+                this.title = title;
                 xhr.open('get', url, true);
                 xhr.send();
                 xhr.onreadystatechange = function () {
@@ -91,6 +103,7 @@ function initializeContent(menu, main) {
                         var src = xhr.responseText;
                         _this.markText = marked(src);
                         _this.isClickSideMenu = "false";
+                        _this.isClickSubMenu = "true";
                         document.getElementsByClassName('el-main')[0].scrollTop = 0;
                     }
                 };
@@ -102,11 +115,18 @@ function initializeContent(menu, main) {
                 else
                     window.open(url, '_self');
             },
-            Submenu: function (sub) {
+            Submenu: function (sub, index) {
                 // 点击左边菜单隐藏中间内容部分，显示中间菜单部分
+                sub = sub === '' ? this.breadcrumb_sub : sub;
+                index = index === '' ? this.breadcrumb_index : index;
+                this.breadcrumb_sub = sub;
+                this.breadcrumb_index = index;
                 this.isClickSideMenu = "true";
+                this.isClickSubMenu = "false";
                 this.isIndex = "false";
                 this.markText = '';
+                this.toptitle = this.tops[index].name;
+                this.subtitle = sub.name;
                 this.main_menu = sub;
                 // 动画效果
                 this.main_menu.subs = _.shuffle(this.main_menu.subs)
