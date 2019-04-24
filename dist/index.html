@@ -67,8 +67,10 @@
         <el-main>
           <div class="main-center">
             <article class="markdown-body">
-              <div id="mark" class="all">
-                <div id="index">
+              <div id="mark" :style="styleMark"  v-html="markText">
+                {{markText}}  
+              </div> 
+               <div id="index" :style="styleIndex">
                   <div style="text-align: center">
                     <svg width="580" height="400" xmlns="http://www.w3.org/2000/svg">
                       <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
@@ -97,8 +99,7 @@
                     </el-carousel>
                   </div>
                 </div>
-              </div>
-              <div id="main_menu" v-if="main_menu">
+              <div id="main_menu" :style="styleMainmenu" v-if="main_menu" >
                 <transition-group name="list-complete" tag="p">
                   <el-button v-bind:type="button_types[index % 6]" v-for="(item, index) in main_menu.subs" v-bind:key="item.name"
                     @click.native="ReadMarkdown(item.src)">{{item.name}}</el-button>
