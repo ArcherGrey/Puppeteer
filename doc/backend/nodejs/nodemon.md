@@ -148,8 +148,8 @@
         "name": "nodejs",
         "subs": [
           {
-            "name": "nodemon",
-            "src": "./doc/backend/nodejs/nodemon.md"
+            "name": "node",
+            "src": ""
           }
         ]
       },
