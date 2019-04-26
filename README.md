@@ -48,6 +48,8 @@
 
 
 - 前端
+  - `Vue`
+    - 初次加载显示 {{xxx}}
   - 开发工具
     - sublime 安装和使用技巧
   - javascript 知识点
@@ -81,10 +83,11 @@
     - 粒子特效
   - `Express` 
     - 应用程序生成器
-  - `nodejs`
-    - ~~`nodemon` 简介（自动重启应用）~~ 
+ 
     
 - 后端
+  - `nodejs`
+    - `nodemon` 简介（自动重启应用） 
   - `C++`
   - `ASP.NET MVC4` 开发指南（阅读总结）
     - `MVC` 基本概念
