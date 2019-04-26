@@ -15,13 +15,17 @@
   <!-- 引入组件库 -->
   <script src="https://unpkg.com/element-ui/lib/index.js"></script>
 
-
+  <style>
+    [v-cloak] {
+    display: none !important;
+}
+</style>
 
 
 </head>
 
 <body>
-  <div id="content">
+  <div id="content" v-cloak>
     <el-container>
       <!-- 左边菜单 -->
       <el-aside width="fit-content" @mouseover.native="Showmenu" @mouseout.native="Hidemenu">
@@ -51,7 +55,7 @@
 
         <!-- 顶部 -->
         <el-header>
-          <el-input v-model="input" placeholder="请输入内容" style="width: fit-content">
+          <el-input v-model="input" placeholder="不能搜索还没做" style="width: fit-content">
             <el-select v-model="select" slot="prepend" placeholder="请选择">
               <el-option label="标题" value="1"></el-option>
               <!-- <el-option label="标签" value="2"></el-option> -->
@@ -122,6 +126,9 @@
 
         <!-- 底部 -->
         <el-footer>
+          <el-button :plain="true" @click.native="Goto('')" title="回到首页">
+            <i class="el-icon-s-home"></i>
+          </el-button>
           <el-button :plain="true" @click.native="BackToTop" title="回到顶部">
             <i class="el-icon-caret-top"></i>
           </el-button>

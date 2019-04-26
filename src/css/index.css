@@ -102,3 +102,10 @@ img{
 #main_menu{
   line-height: 3;
 }
+
+.el-select .el-input {
+  width: 130px;
+}
+
+
+

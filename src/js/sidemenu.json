@@ -3,6 +3,15 @@
     "name": "前端",
     "subs": [
       {
+        "name": "Vue",
+        "subs": [
+          {
+            "name": "初次加载显示{{xxx}}",
+            "src": "./doc/frontend/Vue/1.md"
+          }
+        ]
+      },
+      {
         "name": "开发工具",
         "subs": [
           {
