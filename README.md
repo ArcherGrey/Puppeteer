@@ -120,12 +120,11 @@
 - Puppeteer
 - js 变量提升
 - outerhtml与innerhtml什么区别 
-- ES6 新特性
+- **ES6 新特性**
 - anime 相关（官方文档翻译完待补充）
 - MVVM 简介
 - javascript 定时器
 - C# 循环内定义还是循环外
-- **mvc 开发指南 （ p344）**
 
 ---
 ## 一些有意思的网站
