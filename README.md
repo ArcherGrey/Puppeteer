@@ -52,7 +52,7 @@
     - 初次加载显示 {{xxx}}
   - 开发工具
     - sublime 安装和使用技巧
-  - javascript 知识点
+  - 原生 javascript 难点
     - 包装对象
     - 原型链
     - `this`
