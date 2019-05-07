@@ -60,8 +60,12 @@
             "src": "./doc/frontend/javascript/javascript模块化.md"
           },
           {
-            "name": "内存管理（堆和栈）",
-            "src": "./doc/frontend/javascript/javascript内存管理（堆和栈）.md"
+            "name": "内存管理",
+            "src": "./doc/frontend/javascript/javascript内存管理.md"
+          },
+          {
+            "name": "执行机制",
+            "src": "./doc/frontend/javascript/run.md"
           },
           {
             "name": "深拷贝和浅拷贝",
