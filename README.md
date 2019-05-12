@@ -68,6 +68,8 @@
     - 深拷贝和浅拷贝（引用传递和值传递）
     - `==` 和 `===`
     - 分号结尾的问题
+    - 类型转换（待补充）
+    - `typeof` 和 `instanceof`
   - `WebGL`
     - `[threejs入门-1] hello,Three.js`
     - `[threejs入门-2] 创造一个世界`

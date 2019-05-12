@@ -78,6 +78,15 @@
           {
             "name": "是否使用分号结尾的问题",
             "src": "./doc/frontend/javascript/semicolon.md"
+          },
+          {
+            "name": "类型转换",
+            "src": "./doc/frontend/javascript/typechange.md"
+          }
+          ,
+          {
+            "name": "typeof 和 instanceof",
+            "src": "./doc/frontend/javascript/typeof.md"
           }
         ]
       },
