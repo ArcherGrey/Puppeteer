@@ -52,7 +52,7 @@
             "src": "./doc/frontend/javascript/闭包.md"
           },
           {
-            "name": "作用域、上下文、执行环境、作用域链",
+            "name": "javascript 执行上下文、作用域、作用域链",
             "src": "./doc/frontend/javascript/javascript作用域.md"
           },
           {
@@ -68,7 +68,7 @@
             "src": "./doc/frontend/javascript/run.md"
           },
           {
-            "name": "深拷贝和浅拷贝",
+            "name": "深拷贝和浅拷贝（值传递和引用传递）",
             "src": "./doc/frontend/javascript/javascript深拷贝和浅拷贝.md"
           },
           {
