@@ -43,7 +43,7 @@
 - 数据存储：属于持久层，轻量级客户端存储技术
 
 
-<img alt="浏览器的主要组件" src="../../../img/web1.png" style="height:50%;width:50%"/>
+<img alt="浏览器的主要组件" src="./img/web1.png" style="height:50%;width:50%"/>
 
 <font color='red'>注： `Chrome` 为每个 `Tab` 分配了各自的渲染引擎实例，每一个都是独立的进程 </font>
 
@@ -70,12 +70,12 @@
 4. 绘制 `render` 树：最后就是绘制，遍历 `render` 树，并使用 `UI` 后端层绘制每一个节点
 
 
-<img alt="渲染引擎基本流程" src="../../../img/render1.png" style="height:50%;width:50%"/>
+<img alt="渲染引擎基本流程" src="./img/render1.png" style="height:50%;width:50%"/>
  
 
 为了更好的用户体验，渲染引擎将会尽可能早的将内容呈现到屏幕上，并不会等所有 `html` 都解析完成之后再去构建和布局 `render` 树，它是解析一部分内容就显示一部分内容，同时可能还在通过网络下载其余内容。
 
-<img alt="渲染引擎流程" src="../../../img/render2.png" style="height:50%;width:50%"/>
+<img alt="渲染引擎流程" src="./img/render2.png" style="height:50%;width:50%"/>
 
 可以看到，尽管 `webkit` 和 `Gecko` 使用的术语稍有不同，但是主要流程基本相同，`Gecko` 称可见的格式化元素组成的树为 `frame` 树，每个元素都是一个 `frame` ，`webkit` 则使用 `render` 树来命名由渲染对象组成的树，`webkit` 中元素的定位称为布局，而 `Gecko` 中称为回流，`webkit` 称利用 `dom` 节点和样式去构建 `render` 树的过程为 `attachment` ，`Gecko` 在 `html` 和 `dom` 树之间附加了一层，称为内容接收器，相当于制造 `dom` 元素的工厂。
 
@@ -91,7 +91,7 @@
 例如，解析 `2 + 3 - 1`，可能返回这样一棵树：
 
 
-<img alt="数学表达式树节点" src="../../../img/render3.png" style="height:50%;width:50%"/>
+<img alt="数学表达式树节点" src="./img/render3.png" style="height:50%;width:50%"/>
 
 文法（`Grammars`）：解析基于文档依据的语法规则，每种可被解析的格式必须具有由词汇和语法规则组成的特定的文法，称为上下文无关文法。（人类语言不具有这一特性，因此不能被一般的解析技术所解析）
 
@@ -104,13 +104,13 @@
 
 解析器一般先把输入分解为合法的符号，在根据语言的语法规则分析文档结构，从而构建解析树：
 
-<img alt="从源文档到解析树" src="../../../img/render4.png" style="height:50%;width:50%"/>
+<img alt="从源文档到解析树" src="./img/render4.png" style="height:50%;width:50%"/>
 
 解析过程是迭代的，解析器取到一个新的符号，用这个符号去匹配一条语法规则，如果匹配了将对应的节点添加到解析树上，然后解析树继续请求下一个符号，如果没有匹配，解析器将在内部保存该符号，然后取下一个符号，直到所有内部保存的符号能够匹配一项语法规则，如果最终没有找到匹配的规则，解析器将抛出一个异常，这意味着文档无效或者包含语法错误。
 
 转换（`Translation`）：很多时候，解析树不是最终结果，解析一般在转换中使用，例如编译过程就是先将源码解析为解析树然后将解析树转换为机器码文档：
 
-<img alt="编译流程" src="../../../img/render5.png" style="height:50%;width:50%"/>
+<img alt="编译流程" src="./img/render5.png" style="height:50%;width:50%"/>
 
 <span id='3.2'></span>
 ### 解析器类型
@@ -155,7 +155,7 @@ null|2+3-1
 
 将会被转换为下面的 `DOM` 树：
 
-<img alt="例子对应的DOM树" src="../../../img/render6.png" style="height:50%;width:50%"/>
+<img alt="例子对应的DOM树" src="./img/render6.png" style="height:50%;width:50%"/>
 
 `html` 不能被一般的自顶向下或自底向上的解析器所解析，因为：
 - 语言本身的宽容特性
@@ -166,7 +166,7 @@ null|2+3-1
 - 符号化：词法分析的过程，将输入解析为符号，包含开始标签、结束标签、属性名和属性值
 - 构建树：符号识别器识别出符号后，将其传递给构建器，然后读取下一个字符，直到所有输入都处理完
 
-<img alt="html解析流程" src="../../../img/render7.png" style="height:50%;width:50%"/>
+<img alt="html解析流程" src="./img/render7.png" style="height:50%;width:50%"/>
 
 ---
 
