@@ -82,11 +82,14 @@
           {
             "name": "类型转换",
             "src": "./doc/frontend/javascript/typechange.md"
-          }
-          ,
+          },
           {
             "name": "typeof 和 instanceof",
             "src": "./doc/frontend/javascript/typeof.md"
+          },
+          {
+            "name": "JavaScript 设计模式",
+            "src": "./doc/frontend/javascript/DesignPattern.md"
           }
         ]
       },

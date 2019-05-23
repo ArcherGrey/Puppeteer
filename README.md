@@ -70,6 +70,7 @@
     - 分号结尾的问题
     - 类型转换（待补充）
     - `typeof` 和 `instanceof`
+    - 设计模式
   - `WebGL`
     - `[threejs入门-1] hello,Three.js`
     - `[threejs入门-2] 创造一个世界`
@@ -129,7 +130,7 @@
 - **ES6 新特性**
 - anime 相关（官方文档翻译完待补充）
 - MVVM 简介
-- C# 循环内定义还是循环外
+- C# 循环内定义还是循环外 
 - websocket
 - signalR
 
