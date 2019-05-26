@@ -71,6 +71,7 @@
     - 类型转换（待补充）
     - `typeof` 和 `instanceof`
     - 设计模式
+    - `Memoization`
   - `WebGL`
     - `[threejs入门-1] hello,Three.js`
     - `[threejs入门-2] 创造一个世界`

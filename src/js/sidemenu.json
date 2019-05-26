@@ -90,6 +90,10 @@
           {
             "name": "JavaScript 设计模式",
             "src": "./doc/frontend/javascript/DesignPattern.md"
+          },
+          {
+            "name": "Memoization",
+            "src": "./doc/frontend/javascript/Memoization.md"
           }
         ]
       },
