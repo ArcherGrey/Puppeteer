@@ -138,6 +138,10 @@
           {
             "name": "浏览器内部工作原理",
             "src": "./doc/frontend/html/render.md"
+          },
+          {
+            "name": "doctype",
+            "src": "./doc/frontend/html/doctype.md"
           }
         ]
       },

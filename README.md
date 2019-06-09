@@ -84,6 +84,7 @@
     - ~~浏览器内部工作原理 （待补充）~~
     - ~~`DOM API` （待补充）~~
     - ~~`file` 协议（待补充）~~
+    - `doctype`
     - [待更新](https://juejin.im/post/5a6547d0f265da3e283a1df7)
   - `css`
   - 可视化效果
