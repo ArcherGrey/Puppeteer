@@ -131,7 +131,7 @@
 - outerhtml与innerhtml什么区别 
 - **ES6 新特性**
 - anime 相关（官方文档翻译完待补充）
-- MVVM 简介
+- MVVM MVC
 - C# 循环内定义还是循环外 
 - websocket
 - signalR
