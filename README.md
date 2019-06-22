@@ -50,75 +50,79 @@
 
 - 前端
   - `Vue`
-    - 初次加载显示 {{xxx}}
+    - [x] 初次加载显示 {{xxx}}
   - 开发工具
-    - sublime 安装和使用技巧
+    - [x] sublime 安装和使用技巧
   - 原生 javascript 难点
-    - 包装对象
-    - 原型链
-    - `this`
-    - `call | apply | bind`
-    - 特殊技巧 (待补充)
-    - `json` 和 `jsonp`
-    - 闭包
-    - 执行上下文、作用域、作用域链
-    - 模块化
-    - 内存管理
-    - 执行机制
-    - 深拷贝和浅拷贝（引用传递和值传递）
-    - `==` 和 `===`
-    - 分号结尾的问题
-    - 类型转换（待补充）
-    - `typeof` 和 `instanceof`
-    - 设计模式
-    - `Memoization`
+    - [x] 包装对象
+    - [x] 原型链
+    - [x] `this`
+    - [x] `call | apply | bind`
+    - [x] 特殊技巧 (待补充)
+    - [x] `json` 和 `jsonp`
+    - [x] 闭包
+    - [x] 执行上下文、作用域、作用域链
+    - [x] 模块化
+    - [x] 内存管理
+    - [x] 执行机制
+    - [x] 深拷贝和浅拷贝（引用传递和值传递）
+    - [x] `==` 和 `===`
+    - [x] 分号结尾的问题
+    - [x] 类型转换（待补充）
+    - [x] `typeof` 和 `instanceof`
+    - [x] 设计模式
+    - [x] `Memoization`
   - `WebGL`
-    - `[threejs入门-1] hello,Three.js`
-    - `[threejs入门-2] 创造一个世界`
-    - `[threejs入门-3] 探索和互动`
+    - [x] `[threejs入门-1] hello,Three.js`
+    - [x] `[threejs入门-2] 创造一个世界`
+    - [x] `[threejs入门-3] 探索和互动`
   - 性能优化
     - ~~javascript 高性能（阅读总结）~~（<font color='red'>待修改</font>）
   - `JQuery`
-    - 一步步实现 `jQuery`
+    - [x] 一步步实现 `jQuery`
   - `html`
     - ~~浏览器内部工作原理 （待补充）~~
     - ~~`DOM API` （待补充）~~
     - ~~`file` 协议（待补充）~~
-    - `doctype`
+    - [x] `doctype`
     - [待更新](https://juejin.im/post/5a6547d0f265da3e283a1df7)
   - `css`
   - 可视化效果
-    - 粒子特效
+    - [x] 粒子特效
   - `Express` 
-    - 应用程序生成器
+    - [x] 应用程序生成器
 
  
     
 - 后端
   - `nodejs`
-    - `nodemon` 简介（自动重启应用） 
+    - [x] `nodemon` 简介（自动重启应用） 
   - `C++`
   - `ASP.NET MVC4` 开发指南（阅读总结）
-    - `MVC` 基本概念
-    - 网址路由和 `MVC` 基本流程
-    - `Model` 相关技术
-    - `Controller` 相关技术
-    - `View` 相关技术
-    - `Area` 相关技术
+    - [x] `MVC` 基本概念
+    - [x] 网址路由和 `MVC` 基本流程
+    - [x] `Model` 相关技术
+    - [x] `Controller` 相关技术
+    - [x] `View` 相关技术
+    - [x] `Area` 相关技术
   - `.NET`
-    - `log4net`
+    - [x] `log4net`
 - 代码规范
   - 通用
-    - 什么时候要写注释如何写好注释
-    - 代码的格式
-    - 代码整洁之道
-    - 如何写好对象和数据结构
-    - 如何写好函数
-- 数据库
+    - [x] 什么时候要写注释如何写好注释
+    - [x] 代码的格式
+    - [x] 代码整洁之道
+    - [x] 如何写好对象和数据结构
+    - [x] 如何写好函数
+- ~~数据库（待补充）~~
   - **`ibatis`(待补充)**
 - 文档
-  - `markdown` 流程图语法 `flowchar`
+  - `markdown`
+    - [x] `markdown` 流程图语法 `flowchar`
   
+- 版本控制
+  - `git`
+    - [x] `git 常用点` 
 
 
 ---

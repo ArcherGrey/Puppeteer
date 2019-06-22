@@ -278,5 +278,19 @@
         ]
       }
     ]
+  },
+  {
+    "name": "版本控制",
+    "subs": [
+      {
+        "name": "RevisionControl",
+        "subs": [
+          {
+            "name": "markdown 流程图语法 flowchar",
+            "src": "./doc/revisioncontrol/git/gitmark.md"
+          }
+        ]
+      }
+    ]
   }
 ]
