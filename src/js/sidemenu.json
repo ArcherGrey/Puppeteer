@@ -286,7 +286,7 @@
         "name": "RevisionControl",
         "subs": [
           {
-            "name": "markdown 流程图语法 flowchar",
+            "name": "git 常用点",
             "src": "./doc/revisioncontrol/git/gitmark.md"
           }
         ]
