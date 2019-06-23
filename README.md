@@ -86,6 +86,8 @@
     - ~~`file` 协议（待补充）~~
     - [x] `doctype`
     - [待更新](https://juejin.im/post/5a6547d0f265da3e283a1df7)
+    - [ ] `svg` 
+    - [ ] `canvas` 
   - `css`
   - 可视化效果
     - [x] 粒子特效
@@ -177,6 +179,8 @@
   - shields.io ：说明文档中各种小图标 [网址](https://shields.io/)
 - chrome 插件
   - FeHelper
+- 图标
+  - [阿里巴巴矢量图标库](https://www.iconfont.cn/)
 
  
 --- 
