@@ -142,6 +142,10 @@
           {
             "name": "doctype",
             "src": "./doc/frontend/html/doctype.md"
+          },
+          {
+            "name": "`Iconfont` 矢量图图标使用说明",
+            "src": "./doc/frontend/html/Iconfont.md"
           }
         ]
       },

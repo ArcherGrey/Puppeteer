@@ -88,6 +88,7 @@
     - [待更新](https://juejin.im/post/5a6547d0f265da3e283a1df7)
     - [ ] `svg` 
     - [ ] `canvas` 
+    - [X] `Iconfont` 矢量图图标使用说明
   - `css`
   - 可视化效果
     - [x] 粒子特效
