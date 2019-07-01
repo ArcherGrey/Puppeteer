@@ -148,8 +148,8 @@
             "src": "./doc/frontend/html/Iconfont.md"
           },
           {
-            "name": "cookie | sessionStorage | localStorage",
-            "src": "./doc/frontend/html/webstore.md"
+            "name": "cookie 和 session",
+            "src": "./doc/frontend/html/session.md"
           }
         ]
       },
