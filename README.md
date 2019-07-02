@@ -85,14 +85,15 @@
     - ~~`DOM API` （待补充）~~
     - ~~`file` 协议（待补充）~~
     - [x] `doctype`
-    - [ ] `cookie 和 session` （session待完成）
+    - [x] `cookie 和 session`
     - [ ]  `sessionStorage | localStorage`
     - [待更新](https://juejin.im/post/5a6547d0f265da3e283a1df7)
     - [ ] `svg` 
     - [ ] `canvas` 
-    - [X] `Iconfont` 矢量图图标使用说明
+    - [x] `Iconfont` 矢量图图标使用说明
   - `css`
     - [ ] `em px` 长度
+    - [x] 盒模型
   - 可视化效果
     - [x] 粒子特效
   - `Express` 
