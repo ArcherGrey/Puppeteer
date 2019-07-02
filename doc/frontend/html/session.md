@@ -73,3 +73,48 @@ Set-Cookie: id=a3fWa; Expires=Wed, 21 Oct 2017 07:28:00 GMT; Secure; HttpOnly
 
 ## `Session`
 
+`Cookie`机制弥补了`HTTP`协议无状态的不足。在`Session`出现之前，基本上所有的网站都采用`Cookie`来跟踪会话。
+
+与`Cookie`不同的是，`session`是以服务端保存状态的。
+
+### 原理
+
+当客户端请求创建一个`session`的时候，服务器会先检查这个客户端的请求里是否已包含了一个`session`标识 - `sessionId`，
+
+- 如果已包含这个`sessionId`，则说明以前已经为此客户端创建过`session`，服务器就按照`sessionId`把这个`session`检索出来使用（如果检索不到，可能会新建一个）
+- 如果客户端请求不包含`sessionId`，则为此客户端创建一个`session`并且生成一个与此`session`相关联的`sessionId`
+
+`sessionId`的值一般是一个既不会重复，又不容易被仿造的字符串，这个`sessionId`将被在本次响应中返回给客户端保存。保存`sessionId`的方式大多情况下用的是`cookie`。
+
+### 有效期
+
+`session`一般在内存中存放，内存空间本身大小就有一定的局限性，因此`session`需要采用一种过期删除的机制来确保`session`信息不会一直累积，来防止内存溢出的发生。
+
+`session`的超时时间可以通过`maxInactiveInterval`属性来设置。
+
+### 注
+
+实际上，有四种方式让`Session`正常工作
+- 通过`URL`传递`SessionID`
+- 通过`Cookie`传递`SessionID`
+- 通过`SSL`传递`SessionID`
+- 通过隐藏表单传递`SessionID`
+
+---
+
+##  区别和联系
+
+|差异|`cookie`|`session`|
+|:---:|:---:|:---:|
+|存储位置|客户端|服务器|
+|数据类型|字符串|对象|
+|访问权限|设置路径则某些地方不能访问|同一用户所有都可以访问|
+
+相同：
+- 都是为了解决 `hhttp` 无状态的问题
+- 都是基于 `cookie`
+
+## 应用场景
+
+- 重要状态使用 `session` ，例如用户登录信息
+- 不重要的使用 `cookie` 例如购物车

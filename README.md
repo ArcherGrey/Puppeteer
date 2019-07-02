@@ -85,7 +85,7 @@
     - ~~`DOM API` （待补充）~~
     - ~~`file` 协议（待补充）~~
     - [x] `doctype`
-    - [ ] `cookie 和 session` 
+    - [ ] `cookie 和 session` （session待完成）
     - [ ]  `sessionStorage | localStorage`
     - [待更新](https://juejin.im/post/5a6547d0f265da3e283a1df7)
     - [ ] `svg` 
