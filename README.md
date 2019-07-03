@@ -72,6 +72,7 @@
     - [x] `typeof` 和 `instanceof`
     - [x] 设计模式
     - [x] `Memoization`
+    - [x] `new` 做了什么
   - `WebGL`
     - [x] `[threejs入门-1] hello,Three.js`
     - [x] `[threejs入门-2] 创造一个世界`

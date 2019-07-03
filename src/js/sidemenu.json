@@ -94,6 +94,10 @@
           {
             "name": "Memoization",
             "src": "./doc/frontend/javascript/Memoization.md"
+          },
+          {
+            "name": "new",
+            "src": "./doc/frontend/javascript/new.md"
           }
         ]
       },
