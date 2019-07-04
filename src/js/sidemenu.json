@@ -98,6 +98,10 @@
           {
             "name": "new",
             "src": "./doc/frontend/javascript/new.md"
+          },
+          {
+            "name": "JavaScript中的继承",
+            "src": "./doc/frontend/javascript/class.md"
           }
         ]
       },
