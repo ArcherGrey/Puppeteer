@@ -13,6 +13,6 @@ var a = new b();
 
 // 相当于
 var a = {}; // 创建空对象
-a.__proto__ = b.prototype; // 设置对象的构造函数
+a.__proto__ = Object.create(b.prototype); // 设置对象的构造函数
 b.call(a); // 将创建的对象作为 this 
 ```

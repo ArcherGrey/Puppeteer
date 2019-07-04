@@ -73,6 +73,7 @@
     - [x] 设计模式
     - [x] `Memoization`
     - [x] `new` 做了什么
+    - [ ] `JavaScript` 中的继承
   - `WebGL`
     - [x] `[threejs入门-1] hello,Three.js`
     - [x] `[threejs入门-2] 创造一个世界`
