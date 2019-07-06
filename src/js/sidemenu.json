@@ -308,5 +308,19 @@
         ]
       }
     ]
+  },
+  {
+    "name": "算法",
+    "subs": [
+      {
+        "name": "leetcode",
+        "subs": [
+          {
+            "name": "1.两数之和",
+            "src": "./doc/Algorithm/leetcode/twosum.md"
+          }
+        ]
+      }
+    ]
   }
 ]
