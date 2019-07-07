@@ -318,6 +318,23 @@
           {
             "name": "1.两数之和",
             "src": "./doc/Algorithm/leetcode/twosum.md"
+          },
+          {
+            "name": "2.两数相加",
+            "src": "./doc/Algorithm/leetcode/addtwonumbers.md"
+          }
+        ]
+      },
+      {
+        "name": "常用",
+        "subs": [
+          {
+            "name": "二分查找",
+            "src": "./doc/Algorithm/normal/binarySearch.md"
+          },
+          {
+            "name": "快速排序",
+            "src": "./doc/Algorithm/normal/quicksort.md"
           }
         ]
       }
