@@ -322,6 +322,10 @@
           {
             "name": "2.两数相加",
             "src": "./doc/Algorithm/leetcode/addtwonumbers.md"
+          },
+          {
+            "name": "3.无重复字符的最长子串",
+            "src": "./doc/Algorithm/leetcode/Substring.md"
           }
         ]
       },
