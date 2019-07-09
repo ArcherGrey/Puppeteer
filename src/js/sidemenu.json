@@ -141,7 +141,7 @@
         ]
       },
       {
-        "name": "html",
+        "name": "浏览器",
         "subs": [
           {
             "name": "浏览器内部工作原理",
@@ -326,6 +326,10 @@
           {
             "name": "3.无重复字符的最长子串",
             "src": "./doc/Algorithm/leetcode/Substring.md"
+          },
+          {
+            "name": "4.寻找两个有序数组的中位数",
+            "src": "./doc/Algorithm/leetcode/mid.md"
           }
         ]
       },
