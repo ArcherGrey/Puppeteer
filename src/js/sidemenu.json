@@ -330,7 +330,12 @@
           {
             "name": "4.寻找两个有序数组的中位数",
             "src": "./doc/Algorithm/leetcode/mid.md"
+          },
+          {
+            "name": "5.最长回文子串",
+            "src": "./doc/Algorithm/leetcode/longsub.md"
           }
+
         ]
       },
       {
