@@ -68,44 +68,40 @@ var longestPalindrome = function (s) {
 
 3.  Manacher 算法
 
-先对字符串做预处理，在每个字符之间插入 `#` ，这样得到的回文串都是奇数个
-
-定义回文半径数组 `p`，`p[i]` 表示第 `i` 个字符为中心的回文串半径，那么该字符串为中心的回文串长度就为 `2p[i]-1`
-
-定义 `mx` 是当前最长回文串的右边界，`id` 是当前最长回文串的中心
-
-如果 `mx > i`, 则 `p[i] = min(p[2 * id - i], mx - i)`，否则 `p[i] = 1`。
-
 代码：
 ```
-var longestPalindrome = function (s){
-    var l=s.length;
-    if(l<2)
-        return s;
-    var ss='#'+s.split('').join('#')+'#';
-    var sl=ss.length;
-    var p=new Array(l);
-    var mx=0,id=0,m=1,r;
-    for(var i=0;i<sl;i++){
-        if(i<mx){
-            p[i]=Math.min(p[2*id-i],mx-1);
-        }else{
-            p[i]=1;
+// Manacher 算法
+
+// 1. 预处理：在每个字符串之间加入# 使得到的回文串都是奇数长度
+// 2. 设置 p[i] 保存第i个字符为中心的回文长度，最长回文串的最右边节点mr，中心节点mp
+// 3. 遍历字符串：
+//     1. 当i<mr时可以利用回文特性，以md为中心，i的对称点j=2mp-i：
+//         1.1 当p[j]<mr-i，说明j的回文在最长回文内部，由对称性得到p[i]=p[j]
+//         1.2 当p[j]>=mr-i,p[i]>=mr-i，mr后面的需要去匹配
+//     2. 其他情况就需要匹配
+
+
+var longestPalindrome = function (s) {
+     ss = "#" + s.split("").join("#") + "#";
+    var p = new Array(s.length);
+    var mr = 0;
+    var mp = 0;
+    for (var i = 0; i < ss.length; i++) {
+        if (i < mr) {
+            var j=2 * mp - i;
+            p[i] = p[j] > mr - i ? mr - i : p[j];
+        } else {
+            p[i] = mp > i ? Math.min(p[2 * mp - i], mr - i) : 1;
         }
-        while(i-p[i]>=0&&i+p[i]<sl&&ss[i-p[i]]==ss[p[i]+i]){
+        while(i-p[i]>=0&&i+p[i]<ss.length&&ss[i-p[i]]==ss[i+p[i]]){
             p[i]++;
         }
-          if (i + p[i] > mx) {
-                mx = i + p[i];
-                id = i;
-            }
-            if(p[i]>m){
-                m=p[i];
-                r=i;
-            }
-
+        if(p[i]>mr-mp){
+            mr=p[i]+i-1;
+            mp=i;
+        }
     }
-    return ss.substring(r-m+1,r+m).replace(/#/g,'');
+    return ss.substring(2*mp-mr,mr+1).replace(/#/g,"");
 }
 ```
 
@@ -114,6 +110,7 @@ var longestPalindrome = function (s){
 
 时间|内存
 :---:|:---:
+96 ms|37.7 MB
 
 4. 中心检测
 
