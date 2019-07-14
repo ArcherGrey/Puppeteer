@@ -9,11 +9,35 @@ console.log(a.prototype) // undefined
 var b = function (){} // b 是一个函数
 console.log(b.prototype) // 不是undefined ，应该是b 可以看作构造函数
 ```
-## `prototype` 和 `__proto__`
 
-几乎所有函数都有 `prototype` 属性，这个属性就是一个指针，指向一个对象（实例原型），这个对象就是调用构造函数创建实例的原型，该对象包含所有实例共享的属性和方法。
+## __proto__（隐式原型）
 
-每个对象（包括基础类型除了`null`）都具有 `__proto__` ，也可以称为隐式原型，也是一个指针，指向该对象的原型(也就是实例原型):
+`JavaScript` 中任意对象都有一个内置属性 `__proto__`，隐式原型指向创建这个对象的函数（`constructor`）的 `prototype`。
+`Object.prototype` 这个对象是个例外，它的 `__proto__` 值为 null:
+
+```
+console.log( typeof Array );   // 'function'
+console.log( Array.prototype ); //数组构造函数 Array 也是一个函数，并且在 Array 的原型中除了指向 Array 的 constructor 之外还有其他的内置对象。
+```
+
+## `prototype` （显示原型）
+
+
+每一个函数在创建之后都会拥有一个名为 `prototype` 的属性，这个属性指向函数的原型对象。通过`Function.prototype.bind`方法构造出来的函数是个例外，它没有`prototype`属性:
+
+```
+var fn = function() {}
+console.log( fn.prototype ); //创建一个函数时，都会有一个 prototype 属性指向它的原型。而 fn.prototype 中有一个 constructor 属性指向 fn 函数。
+```
+
+##  `prototype` 和 `__proto__` 的作用
+
+- 显式原型的作用：用来实现基于原型的继承与属性的共享。
+- 隐式原型的作用：构成原型链，同样用于实现基于原型的继承。举个例子，当我们访问 `obj` 这个对象中的 `x` 属性时，如果在 `obj` 中找不到，那么就会沿着 `__proto__` 依次查找。
+
+
+## 关系
+
 ```
 // 构造函数
 function fn(){};

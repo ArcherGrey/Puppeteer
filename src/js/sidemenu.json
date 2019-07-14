@@ -171,6 +171,10 @@
           {
             "name": "盒子模型",
             "src": "./doc/frontend/css/box.md"
+          },
+          {
+            "name": "实现水平垂直居中",
+            "src": "./doc/frontend/css/vhmid.md"
           }
         ]
       },
