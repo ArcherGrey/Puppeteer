@@ -97,7 +97,7 @@
   - `css`
     - [ ] `em px` 长度
     - [x] 盒模型
-    - [ ] 水平垂直居中
+    - [x] 水平垂直居中
   - 可视化效果
     - [x] 粒子特效
   - `Express` 
@@ -178,6 +178,7 @@
 - [Cloud 9 是一个非常强大的在线代码编辑器，它包含了一个完整的 Ubuntu 环境，所有的一切都是运行在云端](http://c9.io)
 - [前端资源教程](https://cnodejs.org/topic/56ef3edd532839c33a99d00e)
 - [pagespeed 前端性能测试](http://developers.google.cn/speed/pagespeed/insights/)
+- [算法练习](https://leetcode-cn.com/)
 
 
 ---
