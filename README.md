@@ -69,7 +69,7 @@
     - [x] `==` 和 `===`
     - [x] 分号结尾的问题
     - [x] 类型转换（待补充）
-    - [x] `typeof` 和 `instanceof`
+    - [x] 类型判断
     - [x] 设计模式
     - [x] `Memoization`
     - [x] `new` 做了什么
@@ -88,7 +88,7 @@
     - ~~`file` 协议（待补充）~~
     - [x] `doctype`
     - [x] `cookie 和 session`
-    - [ ]  `sessionStorage | localStorage`
+    - [x]  `sessionStorage | localStorage`
     - [待更新](https://juejin.im/post/5a6547d0f265da3e283a1df7)
     - [ ] `svg` 
     - [ ] `canvas` 
@@ -97,6 +97,7 @@
   - `css`
     - [ ] `em px` 长度
     - [x] 盒模型
+    - [ ] 水平垂直居中
   - 可视化效果
     - [x] 粒子特效
   - `Express` 

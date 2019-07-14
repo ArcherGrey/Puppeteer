@@ -1,4 +1,16 @@
-# typeof 和 instanceof
+# 类型判断
+
+其实常规方法主要有四种
+
+- `typeof`
+- `instanceof`
+- `Object.prototype.toString`
+- `constructor`
+
+其实这四种方式归根结底就是两种思路：
+
+- 根据数据类型判断（1，2）
+- 根据构造函数判断（3，4）`
 
 ## typeof
 

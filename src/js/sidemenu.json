@@ -84,7 +84,7 @@
             "src": "./doc/frontend/javascript/typechange.md"
           },
           {
-            "name": "typeof 和 instanceof",
+            "name": "类型判断",
             "src": "./doc/frontend/javascript/typeof.md"
           },
           {
@@ -158,6 +158,10 @@
           {
             "name": "cookie 和 session",
             "src": "./doc/frontend/html/session.md"
+          },
+          {
+            "name": "sessionStorage 和 localStorage",
+            "src": "./doc/frontend/html/storage.md"
           }
         ]
       },
