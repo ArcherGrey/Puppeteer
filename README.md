@@ -74,6 +74,7 @@
     - [x] `Memoization`
     - [x] `new` 做了什么
     - [x] `JavaScript` 中的继承
+    - [ ] `JavaScript` 异步
   - `WebGL`
     - [x] `[threejs入门-1] hello,Three.js`
     - [x] `[threejs入门-2] 创造一个世界`
@@ -98,6 +99,9 @@
     - [ ] `em px` 长度
     - [x] 盒模型
     - [x] 水平垂直居中
+    - [ ] 页面布局
+    - [ ] 解析顺序
+    - [ ] 开启GPU加速
   - 可视化效果
     - [x] 粒子特效
   - `Express` 

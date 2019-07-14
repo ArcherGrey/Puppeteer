@@ -1,52 +1,117 @@
 # `JavaScript` 中的继承
 
-> 经典的面向对象语言中通过 `class` 来实现继承，而 `JavaScript` 中是通过原型链来实现继承，通常被称为 **原型式继承**
+## 构造函数继承
 
-首先来声明一个构造函数：
+(也叫经典继承)
+
+基本思想:即在子类型构造函数的内部调用超类型构造函数：
 ```
-function Person(first, last, age, gender, interests) {
-  this.name = {
-    first,
-    last
-  };
-  this.age = age;
-  this.gender = gender;
-  this.interests = interests;
+function Father(){
+	this.colors = ["red","blue","green"];
+}
+function Son(){
+	Father.call(this);//继承了Father,且向父类型传递参数
+}
+var instance1 = new Son();
+instance1.colors.push("black");
+console.log(instance1.colors);//"red,blue,green,black"
+
+var instance2 = new Son();
+console.log(instance2.colors);//"red,blue,green" 可见引用类型值是独立的
+```
+
+解决了原型链的两大问题:
+
+-  保证了原型链中引用类型值的独立,不再被所有实例共享;
+
+-  子类型创建时也能够向父类型传递参数.
+
+存在的问题:
+- 方法都在构造函数中定义, 因此函数复用也就不可用了.
+- 超类型(如Father)中定义的方法,对子类型而言也是不可见的. 
+
+考虑此,借用构造函数的技术也很少单独使用.
+
+## 组合继承
+
+（伪经典继承）
+
+指的是将原型链和借用构造函数的技术组合到一块,从而发挥两者之长的一种继承模式.
+
+基本思路: 使用原型链实现对原型属性和方法的继承,通过借用构造函数来实现对实例属性的继承：
+```
+function Father(name){
+	this.name = name;
+	this.colors = ["red","blue","green"];
+}
+Father.prototype.sayName = function(){
+	alert(this.name);
 };
+function Son(name,age){
+	Father.call(this,name);//继承实例属性，第一次调用Father()
+	this.age = age;
+}
+Son.prototype = new Father();//继承父类方法,第二次调用Father()
+Son.prototype.sayAge = function(){
+	alert(this.age);
+}
+var instance1 = new Son("louis",5);
+instance1.colors.push("black");
+console.log(instance1.colors);//"red,blue,green,black"
+instance1.sayName();//louis
+instance1.sayAge();//5
+
+var instance1 = new Son("zhai",10);
+console.log(instance1.colors);//"red,blue,green"
+instance1.sayName();//zhai
+instance1.sayAge();//10
 ```
 
-所有的方法都定义在构造函数的原型上：
-```
-Person.prototype.greeting = function() {
-  alert('Hi! I\'m ' + this.name.first + '.');
-};
-```
+组合继承避免了原型链和借用构造函数的缺陷,融合了它们的优点,成为 `JavaScript` 中最常用的继承模式. 而且, `instanceof` 和 `isPrototypeOf( )`也能用于识别基于组合继承创建的对象.
+同时我们还注意到组合继承其实调用了两次父类构造函数, 造成了不必要的消耗.
 
-现在我们想要创建一个 `Teacher` 类，这个类会继承 `Person` 的所有成员同时还包括：
-- 一个新属性 `subject` 教授的学科
-- 一个新方法 `greeting()` 比 `Person` 中的更正式一点
+## 原型继承
 
-定义 `Teacher` 的构造函数：
+在`object()`函数内部, 先创建一个临时性的构造函数, 然后将传入的对象作为这个构造函数的原型,最后返回了这个临时类型的一个新实例:
 ```
-function Teacher(first, last, age, gender, interests, subject) {
-  Person.call(this, first, last, age, gender, interests);
-
-  this.subject = subject;
+function object(o){
+	function F(){}
+	F.prototype = o;
+	return new F();
 }
 ```
 
-这里只是把 `Person` 的原型属性继承了，原型方法没有，所以需要把 `Teacher` 的原型对象指向 `Person` 的原型对象：
+从本质上讲, `object()` 对传入其中的对象执行了一次浅复制
+
+原型式继承中, 包含引用类型值的属性始终都会共享相应的值, 就像使用原型模式一样.
+
+## 寄生式继承
+
+寄生式继承的思路与(寄生)构造函数和工厂模式类似, 即创建一个仅用于封装继承过程的函数,该函数在内部以某种方式来增强对象,最后再像真的是它做了所有工作一样返回对象. 如下:
 ```
-Teacher.prototype = Object.create(Person.prototype);
-```
-这个时候 `Teacher.prototype.constructor` 会指向 `Person()`，需要补充设置：
-```
-Teacher.prototype.constructor = Teacher;
+function createAnother(original){
+	var clone = object(original);//通过调用object函数创建一个新对象
+	clone.sayHi = function(){//以某种方式来增强这个对象
+		alert("hi");
+	};
+	return clone;//返回这个对象
+}
 ```
 
+## 寄生组合式继承
 
-注：每一个函数对象（`Function`）都有一个`prototype`属性，并且只有函数对象有`prototype`属性，因为`prototype`本身就是定义在`Function`对象下的属性。当我们输入类似`var person1=new Person(...)`来构造对象时，`JavaScript`实际上参考的是`Person.prototype`指向的对象来生成`person1`。另一方面，`Person()`函数是`Person.prototype`的构造函数，也就是说`Person===Person.prototype.constructor`（不信的话可以试试）。
+组合继承是 `JavaScript` 最常用的继承模式; 不过, 它也有自己的不足. 组合继承最大的问题就是无论什么情况下,都会调用两次父类构造函数
+ 
+寄生组合式继承就是为了降低调用父类构造函数的开销而出现的:
+```
+function extend(subClass,superClass){
+	var prototype = object(superClass.prototype);//创建对象
+	prototype.constructor = subClass;//增强对象
+	subClass.prototype = prototype;//指定对象
+}
+```
 
-在定义新的构造函数`Teacher`时，我们通过`function.call`来调用父类的构造函数，但是这样无法自动指定`Teacher.prototype`的值，这样`Teacher.prototype`就只能包含在构造函数里构造的属性，而没有方法。因此我们利用`Object.create()`方法将`Person.prototype`作为`Teacher.prototype`的原型对象，并改变其构造器指向，使之与`Teacher`关联。
+寄生组合式继承,集寄生式继承和组合继承的优点于一身,是实现基于类型继承的最有效方法
 
-任何您想要被继承的方法都应该定义在构造函数的`prototype`对象里，并且永远使用父类的`prototype`来创造子类的`prototype`，这样才不会打乱类继承结构。
+
+

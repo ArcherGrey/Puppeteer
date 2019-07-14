@@ -16,3 +16,13 @@ var a = {}; // 创建空对象
 a.__proto__ = Object.create(b.prototype); // 设置对象的构造函数
 b.call(a); // 将创建的对象作为 this 的上下文
 ```
+
+例2：
+```
+function create(Con, ...args) {
+  let obj = {}
+  Object.setPrototypeOf(obj, Con.prototype)
+  let result = Con.apply(obj, args)
+  return result instanceof Object ? result : obj
+}
+```
