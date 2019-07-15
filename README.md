@@ -75,7 +75,7 @@
     - [x] `new` 做了什么
     - [x] `JavaScript` 中的继承
     - [ ] `JavaScript` 异步
-    - [ ] 
+    - [ ] `JavaScript` 创建对象
   - `WebGL`
     - [x] `[threejs入门-1] hello,Three.js`
     - [x] `[threejs入门-2] 创造一个世界`

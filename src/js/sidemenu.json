@@ -102,6 +102,10 @@
           {
             "name": "JavaScript中的继承",
             "src": "./doc/frontend/javascript/class.md"
+          },
+          {
+            "name": "JavaScript 创建对象",
+            "src": "./doc/frontend/javascript/create.md"
           }
         ]
       },
