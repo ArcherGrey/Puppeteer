@@ -350,6 +350,10 @@
           {
             "name": "6.Z 字形变换 ",
             "src": "./doc/Algorithm/leetcode/z.md"
+          },
+          {
+            "name": "7.整数反转 ",
+            "src": "./doc/Algorithm/leetcode/reverse.md"
           }
 
         ]
