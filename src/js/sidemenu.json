@@ -106,6 +106,10 @@
           {
             "name": "JavaScript 创建对象",
             "src": "./doc/frontend/javascript/create.md"
+          },
+          {
+            "name": "防抖和节流",
+            "src": "./doc/frontend/javascript/debounce.md"
           }
         ]
       },

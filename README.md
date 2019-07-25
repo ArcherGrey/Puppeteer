@@ -57,7 +57,7 @@
     - [x] 包装对象
     - [x] 原型链
     - [x] `this`
-    - [x] `call | apply | bind`
+    - [x] `call | apply | bind` (待补充)
     - [x] 特殊技巧 (待补充)
     - [x] `json` 和 `jsonp`
     - [x] 闭包
@@ -76,6 +76,7 @@
     - [x] `JavaScript` 中的继承 (待补充)
     - [ ] `JavaScript` 异步
     - [x] `JavaScript` 创建对象
+    - [x] 防抖和节流
   - `WebGL`
     - [x] `[threejs入门-1] hello,Three.js`
     - [x] `[threejs入门-2] 创造一个世界`
