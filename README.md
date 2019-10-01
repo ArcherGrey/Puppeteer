@@ -13,7 +13,7 @@
 
 ## 分支vue
 
-<div style="opacity: 0.5;">
+<div style="color: red;">
 
 `markdown`：
 - **markdown的锚点跳转标签必须是英文小写(全部都要)**
