@@ -13,12 +13,12 @@
 
 ## 分支vue
 
-<div style="opacity: 0.5;">
+<div style='color:red'>
 
 `markdown`：
 - **markdown的锚点跳转标签必须是英文小写(全部都要)**
 - **锚点多个单词之间可以使用`-`连接**
-
+<div>
 
 布局：
 - 左侧菜单中是类别目录，点击后再中央区域显示具体文章
