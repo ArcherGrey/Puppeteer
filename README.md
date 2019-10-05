@@ -9,7 +9,35 @@
 
 [地址](https://archergrey.github.io/document/dist)
 
+## 面试目录
 
+计划完成60
+进度7/60
+
+- JavaScript
+  - 基础
+    - [x] this
+    - [x] call apply bind
+    - [x] 防抖
+    - [x] 节流
+    - [x] 深拷贝浅拷贝
+    - [x] 继承
+    - [x] promise
+    - [x] instanceof
+    - [x] 双向数据绑定（待补充）
+    - [x] 简单路由
+    - [x] Event Bus
+    - [x] 发布订阅和观察者
+    - [x] 手写代码（补充中）
+    - [x] 参考网址
+- css
+  - 基础
+    - [] margin
+    - [] position
+    - []
+  - 布局
+    - [] 圣杯双飞翼
+- html
 
 ## 分支vue
 

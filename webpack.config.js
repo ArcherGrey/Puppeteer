@@ -79,9 +79,13 @@ module.exports = {
         }),
         // 用于静态文件拷贝
         new CopyWebpackPlugin([
+            // {
+            //     from: path.resolve(__dirname, './doc'),//静态资源目录源地址
+            //     to: path.resolve(__dirname, './dist/doc') //目标地址，相对于output的path目录
+            // },
             {
-                from: path.resolve(__dirname, './doc'),//静态资源目录源地址
-                to: path.resolve(__dirname, './dist/doc') //目标地址，相对于output的path目录
+                from: path.resolve(__dirname, './Interview'),//静态资源目录源地址
+                to: path.resolve(__dirname, './dist/Interview') //目标地址，相对于output的path目录
             },
             {
                 from: path.resolve(__dirname, './img'),//静态资源目录源地址
