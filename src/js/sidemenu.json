@@ -73,8 +73,8 @@
         "name": "基础",
         "subs": [
           {
-            "name": "初次加载显示{{xxx}}",
-            "src": "./doc/frontend/Vue/1.md"
+            "name": "优先级和继承",
+            "src": "./Interview/Css/basic/cascade.md"
           }
         ]
       }
