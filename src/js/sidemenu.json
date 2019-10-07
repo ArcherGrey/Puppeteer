@@ -60,8 +60,65 @@
           {
             "name": "发布订阅和观察者",
             "src": "./Interview/JavaScript/basic/Observer.md"
+          },
+          {
+            "name": "闭包",
+            "src": "./Interview/JavaScript/basic/Closer.md"
+          },
+          {
+            "name": "原型链",
+            "src": "./Interview/JavaScript/basic/prototype.md"
+          },
+          {
+            "name": "== 和 ===",
+            "src": "./Interview/JavaScript/basic/equal.md"
+          },
+          {
+            "name": "json 和 jsonp",
+            "src": "./Interview/JavaScript/basic/json.md"
+          },
+          {
+            "name": "变量提升",
+            "src": "./Interview/JavaScript/basic/Hoisting.md"
+          },
+          {
+            "name": "箭头函数",
+            "src": "./Interview/JavaScript/basic/arrow.md"
+          },
+          {
+            "name": "let 和 const",
+            "src": "./Interview/JavaScript/basic/let.md"
+          },
+          {
+            "name": "柯里化",
+            "src": "./Interview/JavaScript/basic/curry.md"
+          },
+          {
+            "name": "偏函数",
+            "src": "./Interview/JavaScript/basic/pfunc.md"
           }
           
+        ]
+      },
+      {
+        "name": "算法",
+        "subs": [
+          {
+            "name": "冒泡排序",
+            "src": "./Interview/JavaScript/alg/bubble.md"
+          },
+          {
+            "name": "数组去重",
+            "src": "./Interview/JavaScript/alg/arr.md"
+          },
+          {
+            "name": "快速排序",
+            "src": "./Interview/JavaScript/alg/qsort.md"
+          },
+          {
+            "name": "二分查找",
+            "src": "./Interview/JavaScript/alg/bsearch.md"
+          }
         ]
       }
     ]
@@ -84,11 +141,19 @@
     "name": "HTML",
     "subs": [
       {
-        "name": "基础",
+        "name": "浏览器",
         "subs": [
           {
-            "name": "初次加载显示{{xxx}}",
-            "src": "./doc/frontend/Vue/1.md"
+            "name": "session 和 cookie",
+            "src": "./Interview/HTML/basic/session.md"
+          },
+          {
+            "name": "sessionStorage 和 localStorage",
+            "src": "./Interview/HTML/basic/storage.md"
+          },
+          {
+            "name": "doctype",
+            "src": "./Interview/HTML/basic/doctype.md"
           }
         ]
       }

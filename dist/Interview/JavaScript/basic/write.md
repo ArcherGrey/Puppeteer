@@ -1,5 +1,8 @@
 # 手写代码
 
+- [面试参考](https://juejin.im/post/5d8989296fb9a06b1f147070#heading-10)
+- [面试参考](https://juejin.im/post/5d87985d6fb9a06add4e6ac3#heading-13)
+
 - [call apply bind](#1)
 - [防抖](#2)
 - [节流](#3)
@@ -9,9 +12,9 @@
 - [promise](#7)
 - [instanceOf](#8)
 - [双向数据绑定](#9)
-- [](#10)
-- [](#11)
-- [](#12)
+- [观察者](#10)
+- [发布订阅](#11)
+- [遍历子节点](#12)
 
 
 
