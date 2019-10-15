@@ -386,4 +386,137 @@ function instanceOf(left, right) {
 <a name='9'></a>
 
 ```
+// 极简第一种
+const obj = {};
+Object.defineProperty(obj, 'text', {
+  get: function() {
+    console.log('get val');
+  },
+  set: function(newVal) {
+    console.log('set val:' + newVal);
+    document.getElementById('input').value = newVal;
+    document.getElementById('span').innerHTML = newVal;
+  }
+});
+
+const input = document.getElementById('input');
+input.addEventListener('keyup', function(e){
+  obj.text = e.target.value;
+})
+
+
+// -----------------
+
+// 极简第二种
+const input = document.getElementById('input');
+const p = document.getElementById('p');
+const obj = {};
+
+const newObj = new Proxy(obj, {
+  get: function(target, key, receiver) {
+    console.log(`getting ${key}!`);
+    return Reflect.get(target, key, receiver);
+  },
+  set: function(target, key, value, receiver) {
+    console.log(target, key, value, receiver);
+    if (key === 'text') {
+      input.value = value;
+      p.innerHTML = value;
+    }
+    return Reflect.set(target, key, value, receiver);
+  },
+});
+
+input.addEventListener('keyup', function(e) {
+  newObj.text = e.target.value;
+});
+```
+
+## 观察者
+<a name='10'></a>
+
+```
+function Subject() {
+    this.observers = [];
+}
+
+Subject.prototype = {
+    add: function (observer) {  // 添加
+        this.observers.push(observer);
+    },
+    remove: function (observer) {  // 删除
+        var observers = this.observers;
+        for (var i = 0; i < observers.length; i++) {
+            if (observers[i] === observer) {
+                observers.splice(i, 1);
+            }
+        }
+    },
+    notify: function () {  // 通知
+        var observers = this.observers;
+        for (var i = 0; i < observers.length; i++) {
+            observers[i].update();
+        }
+    }
+}
+
+function Observer(name) {
+    this.name = name;
+}
+
+Observer.prototype = {
+    update: function () {  // 更新
+        console.log('my name is ' + this.name);
+    }
+}
+
+var sub = new Subject();
+
+var obs1 = new Observer('ttsy1');
+var obs2 = new Observer('ttsy2');
+
+sub.add(obs1);
+sub.add(obs2);
+sub.notify();  //my name is ttsy1、my name is ttsy2
+
+```
+
+## 发布订阅
+<a name='11'></a>
+
+```
+let pubSub = {
+    list: {},
+    subscribe: function (key, fn) {  // 订阅
+        if (!this.list[key]) {
+            this.list[key] = [];
+        }
+        this.list[key].push(fn);
+    },
+    publish: function () {  // 发布
+        let arg = arguments;
+        let key = [].shift.call(arg);
+        let fns = this.list[key];
+
+        if (!fns || fns.length <= 0) return false;
+
+        for (var i = 0, len = fns.length; i < len; i++) {
+            fns[i].apply(this, arg);
+        }
+
+    },
+    unSubscribe(key) {  // 取消订阅
+        delete this.list[key];
+    }
+};
+
+pubSub.subscribe('name', (name) => {
+    console.log('your name is ' + name);
+});
+pubSub.subscribe('sex', (sex) => {
+    console.log('your sex is ' + sex);
+});
+pubSub.publish('name', 'ttsy1');  // your name is ttsy1
+pubSub.publish('sex', 'male');  // your sex is male
+
 ```
