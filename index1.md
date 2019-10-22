@@ -1,0 +1,85 @@
+# 内容目录
+
+## 面试目录
+
+计划完成 60
+进度 21/60
+
+- JavaScript
+  - 基础
+    - [x] this
+    - [x] call apply bind
+    - [x] 防抖
+    - [x] 节流
+    - [x] 深拷贝浅拷贝
+    - [x] 继承
+    - [x] promise
+    - [x] instanceof
+    - [x] 双向数据绑定（待补充）
+    - [x] 简单路由
+    - [x] Event Bus
+    - [x] 发布订阅和观察者
+    - [x] 手写代码（补充中）
+    - [x] 参考网址
+    - [x] 闭包
+    - [] 操作节点
+    - [x] 变量提升
+    - [x] == 和 ===
+    - [] 异步加载方法
+    - [x] 柯里化
+    - [x] 偏函数
+    - [x] 原型链
+    - [x] let const
+    - [x] json,jsonp
+    - [x] 箭头函数
+    - [] 严格模式
+  - jQuery
+    - [] 扩展方法
+    - [] 事件绑定
+  - 算法
+    - [x] 冒泡排序
+    - [x] 数组去重
+    - [x] 快排
+    - [x] 二分查找
+  - Vue
+    - [ ] 生命周期
+    - [] 组件通信
+  - React
+    - [] 有状态无状态组件
+    - [] setState
+- css
+  - 基础
+    - [] margin
+    - [] position
+    - [x] 优先级和继承
+    - [] css3
+    - [] float
+    - [] em rem px
+    - [] 行内元素和块级元素
+    - [x] 盒模型
+    - [x] BFC
+  - 布局
+    - [] 常用布局
+    - [x] 垂直水平居中
+    - []
+- html
+  - 浏览器
+    - [x] `session 和 cookie`
+    - [x] `sessionStorage 和 localStorage`
+    - [] 性能优化
+    - [] html5
+    - [] 事件模型
+    - [] 事件委托
+    - [] 语义化
+    - [] iframe
+    - [x] 从输入 url 到页面渲染过程
+    - [x] `doctype`
+  - 网络
+    - [] get post
+    - [x] tcp 三次握手四次挥手
+    - [x] http 状态码
+    - [] http2.0
+    - [] https
+    - [] ajax
+    - [] 实时通信
+    - [] 跨域
