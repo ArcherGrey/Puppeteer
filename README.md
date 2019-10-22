@@ -130,3 +130,4 @@
 - Json Editor ： Json 可视化编辑器
 - ESLint
 - Markdown Preview Enhanced 流程图可视化
+- prettier 自动格式化
