@@ -1,21 +1,21 @@
-# 文档合集
+# :closed_book: 无限文档
 
-单页面 静态页面
+:page_facing_up: 静态单页面
 
-安装：
+:white_check_mark: 运行依赖安装：
 
 - 需要 nodejs 环境
 - npm install
 - npm start
 
-[地址](https://archergrey.github.io/document/dist)
+[地址](https://archergrey.github.io/UnlimitedDocsWork/dist)
 
-## 内容目录
+## :green_book: 内容目录
 
 [现在](./index1.md)
 [旧](./index2.md)
 
-`markdown`：
+:question: `markdown`：
 
 - **markdown 的锚点跳转标签必须是英文小写(全部都要)**
 - **锚点多个单词之间可以使用`-`连接**
@@ -59,7 +59,7 @@
 
 ---
 
-## 一些有意思的网站
+## :secret: 一些有意思的网站
 
 - [你不需要 jquery](https://blog.garstasio.com/you-dont-need-jquery/)
 - [nodejs 文档](https://nodejs.org/download/release/v8.9.1/docs/api/)
@@ -78,7 +78,7 @@
 
 ---
 
-## 常用库、框架、工具
+## :triangular_ruler: 常用库、框架、工具
 
 - jQuery
 - Vue [文档](https://cn.vuejs.org/index.html)
@@ -104,7 +104,7 @@
 
 ---
 
-## vscode 插件
+## :recycle: vscode 插件
 
 注：部分插件需要命令打开 `F1` 例如 json 编辑器 命令搜索 json 开启
 
