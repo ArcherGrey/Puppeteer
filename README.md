@@ -1,5 +1,7 @@
 # :closed_book: 无限文档
 
+:house: [地址](https://archergrey.github.io/UnlimitedDocsWork/dist)
+
 :page_facing_up: 静态单页面
 
 :white_check_mark: 运行依赖安装：
@@ -8,7 +10,12 @@
 - npm install
 - npm start
 
-[地址](https://archergrey.github.io/UnlimitedDocsWork/dist)
+## 常用命令
+
+|     命令      |       详细       |
+| :-----------: | :--------------: |
+| npm run start |  模拟服务器运行  |
+| npm run build | 生成打包后的文件 |
 
 ## :green_book: 内容目录
 
@@ -32,13 +39,6 @@
 
 - `mainmenu.json` 保存中间跑马灯图片链接
 - `sidemenu.json` 保存侧边选中后的文档链接，添加新的文档就在这个文件中添加，通过 `json` 可视化编辑器添加很方便
-
----
-
-## 待更新内容
-
-- 更新顶部：添加按照标题搜索功能（功能暂无）
-- 文章目录
 
 ---
 
