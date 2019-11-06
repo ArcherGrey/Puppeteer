@@ -15,19 +15,10 @@
 [现在](./index1.md)
 [旧](./index2.md)
 
-## 分支 vue
-
-<div style='color:red'>
- 
 `markdown`：
-- **markdown的锚点跳转标签必须是英文小写(全部都要)**
+
+- **markdown 的锚点跳转标签必须是英文小写(全部都要)**
 - **锚点多个单词之间可以使用`-`连接**
-<div>
-
-布局：
-
-- 左侧菜单中是类别目录，点击后再中央区域显示具体文章
-- 系列文档放在首页跑马灯中
 
 技术相关：
 
@@ -41,17 +32,6 @@
 
 - `mainmenu.json` 保存中间跑马灯图片链接
 - `sidemenu.json` 保存侧边选中后的文档链接，添加新的文档就在这个文件中添加，通过 `json` 可视化编辑器添加很方便
-
-问题解决：
-
-- 解决点击展开所有 menu 的问题，由于 index 设置一样导致所有都展开，index 不同即可
-- 底部添加回到顶部按钮（待修改为下拉滑动条显示）
-- 添加 Breadcrumb 面包屑，显示当前页面的路径，快速返回之前的任意页面
-- vue 初次加载显示 {{xxx}} （添加 v-cloak 在解析完成之前隐藏，详见 vue 文档）
-
-**之前是 vue 写的，在 branch 分支**
-
-</div>
 
 ---
 
@@ -116,6 +96,7 @@
   - vscode：综合最好
 - github
   - shields.io ：说明文档中各种小图标 [网址](https://shields.io/)
+  - [github emoji](https://github.com/caiyongji/emoji-list)
 - chrome 插件
   - FeHelper
 - 图标
