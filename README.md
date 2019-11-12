@@ -10,6 +10,7 @@
   - [ES6](https://github.com/ArcherGrey/UnlimitedDocsWork/labels/ES6)
     - [类型扩展]()
       - [模板字面量](https://github.com/ArcherGrey/UnlimitedDocsWork/issues/3)
+      - [set 和 map](https://github.com/ArcherGrey/UnlimitedDocsWork/issues/4)
   - [DOM]()
 - [HTTP]()
 - [前端框架]()
