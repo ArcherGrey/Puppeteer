@@ -102,6 +102,8 @@
   - FeHelper
 - 图标
   - [阿里巴巴矢量图标库](https://www.iconfont.cn/)
+- git 
+  - [国内镜像](https://github.com/waylau/git-for-win)
 
 ---
 
