@@ -7,7 +7,7 @@
 - [CSS]()
 - [JS]()
   - [ECMAScript]()
-  - [ES6]()
+  - [ES6](https://github.com/ArcherGrey/UnlimitedDocsWork/labels/ES6)
     - [类型扩展]()
       - [模板字面量]()
   - [DOM]()
