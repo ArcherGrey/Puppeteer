@@ -45,6 +45,7 @@
 - React 
   - [react 小书（入门）](http://huziketang.mangojuice.top/books/react/)
   - [react 小书配套练习](http://scriptoj.mangojuice.top/problemsGroups/593a2e29b3838c385539fa4f)
+  - [redux 文档](https://www.redux.org.cn/)
 - 模拟操作
   - Puppeteer [文档](https://zhaoqize.github.io/puppeteer-api-zh_CN/#/)
 - nodejs
