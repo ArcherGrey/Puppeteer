@@ -19,9 +19,9 @@
 - [参考资料]()
 
 ## :books: 书籍
-
-- [JS 函数式编程指南 pdf](https://github.com/ArcherGrey/UnlimitedDocsWork/blob/master/book/mostly-adequate-guide-chinese.pdf)
-  - [gitbook版本](https://llh911001.gitbooks.io/mostly-adequate-guide-chinese/content/)
+- 前端
+  - [JS 函数式编程指南 pdf](https://github.com/ArcherGrey/UnlimitedDocsWork/blob/master/book/mostly-adequate-guide-chinese.pdf)
+    - [gitbook版本](https://llh911001.gitbooks.io/mostly-adequate-guide-chinese/content/)
 
 ## :secret: 一些有意思的网站
 
@@ -72,6 +72,7 @@
   - [阿里巴巴矢量图标库](https://www.iconfont.cn/)
 - git 
   - [国内镜像](https://github.com/waylau/git-for-win)
+  - [Git的奇技淫巧](https://github.com/521xueweihan/git-tips)
 
 ---
 
