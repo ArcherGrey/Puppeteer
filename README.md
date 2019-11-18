@@ -55,6 +55,8 @@
   - Puppeteer [文档](https://zhaoqize.github.io/puppeteer-api-zh_CN/#/)
 - nodejs
   - express [文档](https://expressjs.com/en/4x/api.html)
+- JavaScript 函数式编程
+  - `Ramda` 支持 curry 化
 - 网页模板
   - pug 模板引擎 [文档](https://pug.bootcss.com/api/getting-started.html)
 - 打包工具
