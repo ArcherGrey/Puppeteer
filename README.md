@@ -87,3 +87,13 @@
 - Markdown Preview Enhanced 流程图可视化
 - prettier 自动格式化
 
+
+## :question: 问题和解决
+
+### 前端
+
+#### Vue
+
+名称|错误信息|原因|解决
+:-:|:-:|:-:|:-:
+排序后数组导致渲染无限循环|You may have an infinite update loop in a component render function. |array.sort()改变了数组自身，导致了过滤器又一次被触发|确保在副本上对数组排序：return value.slice().sort(...)
