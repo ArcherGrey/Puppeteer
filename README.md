@@ -47,6 +47,7 @@
 
 - jQuery
 - Vue [文档](https://cn.vuejs.org/index.html)
+  - [chrome devtools]()
 - React 
   - [react 小书（入门）](http://huziketang.mangojuice.top/books/react/)
   - [react 小书配套练习](http://scriptoj.mangojuice.top/problemsGroups/593a2e29b3838c385539fa4f)
@@ -68,8 +69,6 @@
 - github
   - shields.io ：说明文档中各种小图标 [网址](https://shields.io/)
   - [github emoji](https://github.com/caiyongji/emoji-list)
-- chrome 插件
-  - FeHelper
 - 图标
   - [阿里巴巴矢量图标库](https://www.iconfont.cn/)
 - git 
