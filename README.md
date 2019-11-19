@@ -47,7 +47,7 @@
 
 - jQuery
 - Vue [文档](https://cn.vuejs.org/index.html)
-  - [chrome devtools]()
+  - [chrome devtools](https://github.com/ArcherGrey/UnlimitedDocsWork/issues/5)
 - React 
   - [react 小书（入门）](http://huziketang.mangojuice.top/books/react/)
   - [react 小书配套练习](http://scriptoj.mangojuice.top/problemsGroups/593a2e29b3838c385539fa4f)
