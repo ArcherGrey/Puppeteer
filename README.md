@@ -18,10 +18,14 @@
 - [前端工具]()
 - [参考资料]()
 
+---
+
 ## :books: 书籍
 - 前端
   - [JS 函数式编程指南 pdf](https://github.com/ArcherGrey/UnlimitedDocsWork/blob/master/book/mostly-adequate-guide-chinese.pdf)
     - [gitbook版本](https://llh911001.gitbooks.io/mostly-adequate-guide-chinese/content/)
+
+---
 
 ## :secret: 一些有意思的网站
 
@@ -86,6 +90,7 @@
 - Markdown Preview Enhanced 流程图可视化
 - prettier 自动格式化
 
+---
 
 ## :question: 问题和解决
 
